@@ -1,0 +1,32 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="chess-pattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="30" height="30" fill="#ffffff" fill-opacity="0.05"/>
+      <rect x="30" width="30" height="30" fill="#ffffff" fill-opacity="0.02"/>
+      <rect y="30" width="30" height="30" fill="#ffffff" fill-opacity="0.02"/>
+      <rect x="30" y="30" width="30" height="30" fill="#ffffff" fill-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#chess-pattern)"/>
+  
+  <!-- Chess pieces silhouettes -->
+  <g fill="#ffffff" fill-opacity="0.03" transform="scale(0.5) translate(100, 100)">
+    <!-- Pawn -->
+    <path d="M80,60 C80,70 75,75 70,80 L70,90 L90,100 L90,110 L50,110 L50,100 L70,90 L70,80 C65,75 60,70 60,60 C60,50 70,40 80,60 Z" transform="translate(0, 0)"/>
+    
+    <!-- Knight -->
+    <path d="M50,40 C60,40 70,40 70,50 C70,60 60,70 60,80 L60,90 L90,100 L90,110 L50,110 L50,100 L70,90 L70,80 C70,70 80,60 80,50 C80,40 70,30 60,30 C50,30 40,40 50,40 Z" transform="translate(100, 0)"/>
+    
+    <!-- Bishop -->
+    <path d="M70,30 C80,40 80,50 70,60 C60,70 60,80 70,90 L70,100 L90,110 L50,110 L70,100 L70,90 C60,80 60,70 70,60 C80,50 80,40 70,30 Z" transform="translate(200, 0)"/>
+    
+    <!-- Rook -->
+    <path d="M50,30 L60,30 L60,40 L70,40 L70,30 L80,30 L80,50 L70,60 L70,90 L90,100 L90,110 L50,110 L50,100 L70,90 L70,60 L60,50 L60,30 Z" transform="translate(300, 0)"/>
+    
+    <!-- Queen -->
+    <path d="M50,30 C55,35 55,40 50,45 C45,40 45,35 50,30 Z M70,30 C75,35 75,40 70,45 C65,40 65,35 70,30 Z M90,30 C95,35 95,40 90,45 C85,40 85,35 90,30 Z M60,50 C70,60 70,70 60,80 L60,90 L90,100 L90,110 L50,110 L50,100 L80,90 L80,80 C70,70 70,60 60,50 Z" transform="translate(0, 120)"/>
+    
+    <!-- King -->
+    <path d="M70,10 L70,20 L80,20 L80,30 L70,30 L70,40 L60,40 L60,30 L50,30 L50,20 L60,20 L60,10 L70,10 Z M60,50 C70,60 70,70 60,80 L60,90 L90,100 L90,110 L50,110 L50,100 L80,90 L80,80 C70,70 70,60 60,50 Z" transform="translate(100, 120)"/>
+  </g>
+</svg>

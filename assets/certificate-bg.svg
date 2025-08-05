@@ -1,0 +1,39 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="certificate-pattern" patternUnits="userSpaceOnUse" width="200" height="200">
+      <!-- Certificate Border Elements -->
+      <path d="M10,10 L190,10 L190,190 L10,190 Z" fill="none" stroke="#d4af37" stroke-width="2" stroke-opacity="0.2"/>
+      
+      <!-- Corner Ornaments -->
+      <path d="M10,10 C20,15 25,20 30,30 C20,25 15,20 10,10 Z" fill="#d4af37" fill-opacity="0.2"/>
+      <path d="M190,10 C180,15 175,20 170,30 C180,25 185,20 190,10 Z" fill="#d4af37" fill-opacity="0.2"/>
+      <path d="M10,190 C20,185 25,180 30,170 C20,175 15,180 10,190 Z" fill="#d4af37" fill-opacity="0.2"/>
+      <path d="M190,190 C180,185 175,180 170,170 C180,175 185,180 190,190 Z" fill="#d4af37" fill-opacity="0.2"/>
+      
+      <!-- Decorative Elements -->
+      <circle cx="100" cy="100" r="50" fill="none" stroke="#d4af37" stroke-width="1" stroke-opacity="0.1"/>
+      <circle cx="100" cy="100" r="40" fill="none" stroke="#d4af37" stroke-width="1" stroke-opacity="0.1"/>
+      
+      <!-- Chess Symbols -->
+      <!-- King -->
+      <path d="M95,60 L95,65 L90,65 L90,70 L95,70 L95,75 L105,75 L105,70 L110,70 L110,65 L105,65 L105,60 L95,60 Z" fill="#d4af37" fill-opacity="0.15"/>
+      
+      <!-- Queen -->
+      <path d="M90,130 C92,128 94,128 95,130 C96,128 98,128 100,130 C102,128 104,128 105,130 C106,128 108,128 110,130 L105,135 L95,135 L90,130 Z" fill="#d4af37" fill-opacity="0.15"/>
+      
+      <!-- Rook -->
+      <path d="M40,100 L45,100 L45,95 L50,95 L50,100 L55,100 L55,105 L50,105 L50,110 L45,110 L45,105 L40,105 L40,100 Z" fill="#d4af37" fill-opacity="0.15"/>
+      
+      <!-- Bishop -->
+      <path d="M150,100 C155,95 155,90 150,85 C145,90 145,95 150,100 Z" fill="#d4af37" fill-opacity="0.15"/>
+      
+      <!-- Decorative Corners -->
+      <path d="M0,0 L20,0 L20,2 L2,2 L2,20 L0,20 Z" fill="#d4af37" fill-opacity="0.3"/>
+      <path d="M180,0 L200,0 L200,20 L198,20 L198,2 L180,2 Z" fill="#d4af37" fill-opacity="0.3"/>
+      <path d="M0,180 L2,180 L2,198 L20,198 L20,200 L0,200 Z" fill="#d4af37" fill-opacity="0.3"/>
+      <path d="M180,198 L198,198 L198,180 L200,180 L200,200 L180,200 Z" fill="#d4af37" fill-opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#certificate-pattern)"/>
+</svg>
