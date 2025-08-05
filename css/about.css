@@ -1,0 +1,560 @@
+/* About Page Specific Styles for Haryana Chess Association Website */
+
+/* ===== Page Banner ===== */
+.page-banner {
+    background: linear-gradient(to right, var(--primary-black), var(--secondary-black));
+    padding: 120px 0 var(--spacing-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/chess-pattern.svg');
+    background-size: 300px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.page-banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.breadcrumbs {
+    position: relative;
+    z-index: 2;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: var(--accent-gold);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+    color: var(--gold-light);
+}
+
+/* ===== Mission & Vision ===== */
+.mission-vision {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.mission-vision-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.mission-box,
+.vision-box {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-gold);
+}
+
+.mission-box::before,
+.vision-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--accent-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.mission-box:hover::before,
+.vision-box:hover::before {
+    transform: scaleX(1);
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+    color: var(--accent-gold);
+}
+
+.mission-box h2,
+.vision-box h2 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.8rem;
+    color: var(--text-white);
+}
+
+.mission-box p,
+.vision-box p {
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* ===== History Section ===== */
+.history-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--secondary-black);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.section-header p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-md) 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--accent-gold);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--accent-gold);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -10px;
+}
+
+.year {
+    position: absolute;
+    top: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+}
+
+.timeline-item:nth-child(odd) .year {
+    right: -80px;
+}
+
+.timeline-item:nth-child(even) .year {
+    left: -80px;
+}
+
+.content {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    max-width: 80%;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.timeline-item:hover .content {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-gold);
+}
+
+.content h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+    font-size: 1.3rem;
+}
+
+.content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ===== Leadership Section ===== */
+.leadership-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.leader-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-gold);
+}
+
+.leader-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.leader-card:hover .leader-image img {
+    transform: scale(1.05);
+}
+
+.leader-info {
+    padding: var(--spacing-lg);
+}
+
+.leader-info h3 {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.3rem;
+    color: var(--text-white);
+}
+
+.position {
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.bio {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    transition: all var(--transition-fast);
+}
+
+.social-links a:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-black);
+}
+
+/* ===== Achievements Section ===== */
+.achievements-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--secondary-black);
+}
+
+.achievements-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.achievement-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-gold);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.achievement-icon i {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+}
+
+.achievement-content h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+    color: var(--text-white);
+}
+
+.achievement-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ===== Affiliations Section ===== */
+.affiliations-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.affiliations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-xl);
+    align-items: center;
+    justify-items: center;
+}
+
+.affiliation-logo {
+    text-align: center;
+    transition: all var(--transition-normal);
+}
+
+.affiliation-logo:hover {
+    transform: scale(1.05);
+}
+
+.affiliation-logo img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: var(--spacing-md);
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all var(--transition-normal);
+}
+
+.affiliation-logo:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+}
+
+.affiliation-logo p {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* ===== Call to Action Section ===== */
+.cta-section {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(to right, var(--primary-black), var(--secondary-black));
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/chess-pattern.svg');
+    background-size: 300px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.cta-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.cta-content h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.cta-content p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 992px) {
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+    }
+    
+    .timeline-item::before {
+        left: 20px;
+    }
+    
+    .timeline-item:nth-child(odd)::before,
+    .timeline-item:nth-child(even)::before {
+        left: 20px;
+    }
+    
+    .year {
+        left: 0 !important;
+        right: auto !important;
+    }
+    
+    .content {
+        max-width: 100%;
+    }
+    
+    .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .leadership-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .achievements-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .affiliations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.6rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .affiliations-grid {
+        grid-template-columns: 1fr;
+    }
+}

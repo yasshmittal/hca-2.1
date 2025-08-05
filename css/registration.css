@@ -1,0 +1,344 @@
+/* Registration Page Styles */
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/chess-tournament.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 0;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Registration Info Section */
+.registration-info {
+    padding: 60px 0;
+    background-color: var(--color-light-bg);
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--box-shadow-sm);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-md);
+}
+
+.info-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--color-dark);
+}
+
+.info-card p {
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Active Tournaments Section */
+.active-tournaments {
+    padding: 60px 0;
+}
+
+.tournament-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tournament-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tournament-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-md);
+}
+
+.tournament-header {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tournament-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.tournament-badge {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.tournament-details {
+    padding: 20px;
+    background-color: var(--color-white);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.detail-item i {
+    color: var(--color-primary);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.tournament-actions {
+    padding: 20px;
+    background-color: var(--color-light-bg);
+    display: flex;
+    gap: 10px;
+}
+
+/* Registration Form Section */
+.registration-form {
+    padding: 60px 0;
+    background-color: var(--color-light-bg);
+}
+
+.form-container {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--box-shadow-sm);
+    max-width: 900px;
+    margin: 40px auto 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.2);
+    outline: none;
+}
+
+.form-control.error {
+    border-color: var(--color-error);
+}
+
+.error-message {
+    color: var(--color-error);
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Success Message */
+.success-message {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.success-message i {
+    font-size: 4rem;
+    color: var(--color-success);
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--color-dark);
+}
+
+.success-message p {
+    color: var(--color-text);
+    margin-bottom: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.success-actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 60px 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: var(--color-white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--color-dark);
+}
+
+.faq-toggle {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--color-light-bg);
+}
+
+.faq-answer p {
+    padding: 20px 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .tournament-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-container {
+        padding: 20px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .page-banner h1 {
+        font-size: 2.2rem;
+    }
+    
+    .page-banner p {
+        font-size: 1rem;
+    }
+}

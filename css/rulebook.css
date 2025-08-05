@@ -1,0 +1,435 @@
+/* Rulebook Specific Styles */
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/banner-rulebook.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.page-banner h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Rules Section */
+.rules-section,
+.tournament-regulations,
+.code-of-conduct,
+.download-section {
+    padding: 80px 0;
+}
+
+.rules-section {
+    background-color: #f9f9f9;
+}
+
+.rules-content,
+.regulations-content,
+.conduct-content {
+    margin-top: 40px;
+}
+
+.rules-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.text-link {
+    color: #1a73e8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.text-link:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Rules Accordion */
+.rules-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.rule-item {
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.rule-header {
+    padding: 20px 25px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.rule-header:hover {
+    background-color: #f5f5f5;
+}
+
+.rule-header.active {
+    background-color: #1a73e8;
+    color: #fff;
+}
+
+.rule-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.toggle-icon {
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.rule-header.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.rule-content {
+    padding: 0 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fff;
+}
+
+.rule-content p,
+.rule-content ul,
+.rule-content ol {
+    margin-bottom: 15px;
+}
+
+.rule-content h4 {
+    margin: 20px 0 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+.chess-diagram {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.chess-diagram img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Tournament Regulations */
+.tournament-regulations {
+    background-color: #fff;
+}
+
+.regulations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.regulation-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.regulation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.regulation-icon {
+    font-size: 2.5rem;
+    color: #1a73e8;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.regulation-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 600;
+}
+
+.regulation-card p,
+.regulation-card ol,
+.regulation-card ul {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.regulation-card ol,
+.regulation-card ul {
+    padding-left: 20px;
+}
+
+/* Code of Conduct */
+.code-of-conduct {
+    background-color: #f0f7ff;
+}
+
+.conduct-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.conduct-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.conduct-item:hover {
+    transform: translateX(5px);
+}
+
+.conduct-icon {
+    font-size: 1.8rem;
+    color: #1a73e8;
+    min-width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e8f0fe;
+    border-radius: 50%;
+}
+
+.conduct-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.conduct-text p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.conduct-note {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+}
+
+.conduct-note p {
+    color: #856404;
+    margin: 0;
+}
+
+/* Download Section */
+.download-section {
+    background-color: #1a73e8;
+    color: #fff;
+    text-align: center;
+}
+
+.download-section h2 {
+    color: #fff;
+}
+
+.download-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.download-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+}
+
+.download-btn i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.download-btn span {
+    font-weight: 500;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: #0d47a1;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .page-banner {
+        padding: 80px 0;
+    }
+    
+    .page-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .rules-section,
+    .tournament-regulations,
+    .code-of-conduct,
+    .download-section {
+        padding: 60px 0;
+    }
+    
+    .conduct-item {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .page-banner p {
+        font-size: 1rem;
+    }
+    
+    .rules-section,
+    .tournament-regulations,
+    .code-of-conduct,
+    .download-section {
+        padding: 50px 0;
+    }
+    
+    .regulation-card {
+        padding: 25px;
+    }
+    
+    .conduct-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .conduct-icon {
+        margin-bottom: 15px;
+    }
+    
+    .download-btn {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner {
+        padding: 50px 0;
+    }
+    
+    .page-banner h1 {
+        font-size: 1.8rem;
+    }
+    
+    .rule-header {
+        padding: 15px 20px;
+    }
+    
+    .rule-header h3 {
+        font-size: 1.1rem;
+    }
+    
+    .rule-content {
+        padding: 0 20px;
+    }
+    
+    .regulation-card {
+        padding: 20px;
+    }
+    
+    .download-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,566 @@
+/* Affiliated Units Page Styles */
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(to right, var(--primary-black), var(--secondary-black));
+    padding: 120px 0 var(--spacing-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/chess-pattern.svg');
+    background-size: 300px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.page-banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.page-banner p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    color: var(--text-light);
+}
+
+.breadcrumbs {
+    position: relative;
+    z-index: 2;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: var(--accent-gold);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+    color: var(--gold-light);
+}
+
+/* Introduction Section */
+.intro-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    color: var(--accent-gold);
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+}
+
+/* District Associations Section */
+.district-associations {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--secondary-black);
+}
+
+.associations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.association-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.association-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.association-header {
+    background-color: #1a3c6e;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.association-logo {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.association-logo img {
+    width: 80%;
+    height: auto;
+}
+
+.association-header h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.association-details {
+    padding: 20px;
+}
+
+.association-info {
+    margin-bottom: 20px;
+}
+
+.association-info p {
+    margin: 10px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.association-info p i {
+    color: #1a3c6e;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.association-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a3c6e;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.association-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 20px;
+}
+
+.association-actions .btn {
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+}
+
+/* Affiliated Clubs Section */
+.affiliated-clubs {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.club-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.club-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.club-logo {
+    width: 120px;
+    background-color: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.club-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.club-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.club-content h3 {
+    color: #1a3c6e;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.club-location {
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.club-location i {
+    margin-right: 8px;
+    color: #FFD700;
+}
+
+.club-description {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.club-contact {
+    margin-bottom: 15px;
+}
+
+.club-contact p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.club-contact p i {
+    color: #1a3c6e;
+    margin-right: 8px;
+    width: 15px;
+    text-align: center;
+}
+
+/* Affiliation Process Section */
+.affiliation-process {
+    padding: 70px 0;
+    background-color: white;
+}
+
+.process-steps {
+    max-width: 800px;
+    margin: 40px auto;
+    position: relative;
+}
+
+.process-steps:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    width: 2px;
+    background-color: #eee;
+    z-index: 0;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #1a3c6e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    flex-grow: 1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.step-content h3 {
+    color: #1a3c6e;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.affiliation-contact {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+}
+
+.affiliation-contact p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 70px 0;
+    background-color: #1a3c6e;
+    color: white;
+}
+
+.cta-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cta-content {
+    flex: 1 1 500px;
+}
+
+.cta-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.cta-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+.cta-buttons {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #FFD700;
+    color: #1a3c6e;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e6c200;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #1a3c6e;
+    border-radius: 30px;
+    color: #1a3c6e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-outline:hover {
+    background-color: #1a3c6e;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .clubs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cta-content {
+        margin-bottom: 20px;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .associations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .club-card {
+        flex-direction: column;
+    }
+    
+    .club-logo {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .association-actions {
+        flex-direction: column;
+    }
+    
+    .association-actions .btn {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .process-steps:before {
+        left: 19px;
+    }
+    
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}

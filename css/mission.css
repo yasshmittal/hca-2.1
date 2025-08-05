@@ -1,0 +1,451 @@
+/* Mission Page Styles */
+
+/* Banner Section */
+.page-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/mission-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.page-banner p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Mission Statement Section */
+.mission-statement {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.mission-statement .container {
+    max-width: 900px;
+}
+
+.mission-statement h2 {
+    color: #1a3c6e;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.mission-statement h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #e63946;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mission-statement p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Mission Pillars Section */
+.mission-pillars {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.mission-pillars h2 {
+    text-align: center;
+    color: #1a3c6e;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.mission-pillars h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #e63946;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pillars-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pillar-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    text-align: center;
+}
+
+.pillar-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f7ff;
+    border-radius: 50%;
+    color: #1a3c6e;
+}
+
+.pillar-icon i {
+    font-size: 2.5rem;
+}
+
+.pillar-card h3 {
+    color: #1a3c6e;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.pillar-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Strategic Goals Section */
+.strategic-goals {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.strategic-goals h2 {
+    text-align: center;
+    color: #1a3c6e;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.strategic-goals h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #e63946;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.goals-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.goal-item {
+    flex: 1 1 calc(50% - 20px);
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.goal-number {
+    background-color: #1a3c6e;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.goal-content h3 {
+    color: #1a3c6e;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.goal-content p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Impact Stories Section */
+.impact-stories {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.impact-stories h2 {
+    text-align: center;
+    color: #1a3c6e;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.impact-stories h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #e63946;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.stories-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.story-card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.story-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-content h3 {
+    color: #1a3c6e;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.story-content p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.story-quote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 4px solid #e63946;
+    margin-top: auto;
+}
+
+.story-quote p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.story-quote cite {
+    font-weight: bold;
+    color: #1a3c6e;
+}
+
+.story-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story-nav-btn:hover {
+    background-color: #1a3c6e;
+    color: white;
+}
+
+.story-nav-btn.prev {
+    left: -20px;
+}
+
+.story-nav-btn.next {
+    right: -20px;
+}
+
+.story-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #1a3c6e;
+    transform: scale(1.2);
+}
+
+/* Join Mission Section */
+.join-mission {
+    padding: 80px 0;
+    background-image: linear-gradient(rgba(26, 60, 110, 0.9), rgba(26, 60, 110, 0.9)), url('../images/join-mission-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.join-mission h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.join-mission p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+.join-mission .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    border: 2px solid #e63946;
+}
+
+.join-mission .btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .story-card {
+        flex-direction: column;
+    }
+    
+    .story-image {
+        min-height: 250px;
+    }
+    
+    .goal-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .mission-statement h2,
+    .mission-pillars h2,
+    .strategic-goals h2,
+    .impact-stories h2,
+    .join-mission h2 {
+        font-size: 1.8rem;
+    }
+    
+    .pillar-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .story-nav-btn.prev {
+        left: 10px;
+    }
+    
+    .story-nav-btn.next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .page-banner p,
+    .mission-statement p,
+    .join-mission p {
+        font-size: 1rem;
+    }
+    
+    .mission-statement,
+    .mission-pillars,
+    .strategic-goals,
+    .impact-stories,
+    .join-mission {
+        padding: 40px 0;
+    }
+}

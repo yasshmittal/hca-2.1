@@ -1,0 +1,467 @@
+/* Contact Page Specific Styles for Haryana Chess Association Website */
+
+/* ===== Page Banner ===== */
+.page-banner {
+    background: linear-gradient(to right, var(--primary-black), var(--secondary-black));
+    padding: 120px 0 var(--spacing-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/chess-pattern.svg');
+    background-size: 300px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.page-banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.breadcrumbs {
+    position: relative;
+    z-index: 2;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: var(--accent-gold);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+    color: var(--gold-light);
+}
+
+/* ===== Contact Info Section ===== */
+.contact-info-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.contact-card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-xl);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-gold);
+}
+
+.icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+}
+
+.icon-wrapper i {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+}
+
+.contact-card h3 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+    color: var(--text-white);
+}
+
+.contact-card p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--accent-gold);
+    font-weight: 500;
+    margin-top: var(--spacing-sm);
+    transition: color var(--transition-fast);
+}
+
+.contact-link:hover {
+    color: var(--gold-light);
+}
+
+/* ===== Contact Form Section ===== */
+.contact-form-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--secondary-black);
+}
+
+.contact-form-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.section-header p {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--primary-black);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.checkbox-group a {
+    color: var(--accent-gold);
+    transition: color var(--transition-fast);
+}
+
+.checkbox-group a:hover {
+    color: var(--gold-light);
+}
+
+.form-submit {
+    grid-column: span 2;
+    margin-top: var(--spacing-sm);
+}
+
+.form-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.chess-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.contact-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl);
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+}
+
+.contact-image-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-gold);
+}
+
+.contact-image-overlay p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(212, 175, 55, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    transition: all var(--transition-fast);
+}
+
+.social-links a:hover {
+    background-color: var(--accent-gold);
+    color: var(--primary-black);
+    transform: translateY(-5px);
+}
+
+/* ===== Map Section ===== */
+.map-section {
+    height: 500px;
+    position: relative;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.map-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid var(--accent-gold);
+}
+
+.map-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--accent-gold);
+}
+
+.map-overlay p {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+/* ===== FAQ Section ===== */
+.faq-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--bg-card);
+    transition: all var(--transition-normal);
+}
+
+.faq-item:hover {
+    border-color: var(--accent-gold);
+}
+
+.faq-question {
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text-white);
+    transition: color var(--transition-fast);
+}
+
+.faq-item:hover .faq-question h3 {
+    color: var(--accent-gold);
+}
+
+.toggle-icon {
+    color: var(--accent-gold);
+    transition: transform var(--transition-fast);
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0 var(--spacing-lg) var(--spacing-lg);
+    display: none;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 992px) {
+    .contact-form-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-image {
+        display: none;
+    }
+    
+    .map-section {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    
+    .map-section {
+        height: 350px;
+    }
+    
+    .faq-question h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .map-section {
+        height: 300px;
+    }
+    
+    .map-overlay {
+        padding: var(--spacing-lg);
+    }
+    
+    .map-overlay h3 {
+        font-size: 1.5rem;
+    }
+}

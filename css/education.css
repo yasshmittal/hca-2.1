@@ -1,0 +1,885 @@
+/* Education Page Styles */
+
+/* Page Banner */
+.page-banner {
+    background: linear-gradient(to right, var(--primary-black), var(--secondary-black));
+    padding: 120px 0 var(--spacing-xl);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/chess-pattern.svg');
+    background-size: 300px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.page-banner h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-white);
+}
+
+.page-banner p {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+    color: var(--text-light);
+}
+
+.breadcrumbs {
+    position: relative;
+    z-index: 2;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: var(--accent-gold);
+    transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+    color: var(--gold-light);
+}
+
+/* Education Introduction Section */
+.education-intro {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--primary-black);
+}
+
+.intro-content h2 {
+    color: var(--accent-gold);
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+}
+
+.intro-content h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.intro-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-light);
+    max-width: 900px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: var(--spacing-xl);
+}
+
+.benefit-card {
+    flex: 1 1 250px;
+    max-width: 280px;
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-gold);
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--accent-gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.benefit-card:hover::before {
+    transform: scaleX(1);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+}
+
+.benefit-icon i {
+    font-size: 2rem;
+}
+
+.benefit-card h3 {
+    color: #1a3c6e;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Educational Programs Section */
+.education-programs {
+    padding: 70px 0;
+    background-color: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    color: #1a3c6e;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #FFD700;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header p {
+    color: #555;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.programs-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.program-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.program-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #1a3c6e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.program-icon i {
+    font-size: 2.5rem;
+}
+
+.program-card h3 {
+    color: #1a3c6e;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.program-card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.program-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.program-features li {
+    padding: 8px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.program-features li:last-child {
+    border-bottom: none;
+}
+
+.program-features li i {
+    color: #FFD700;
+    margin-right: 10px;
+}
+
+/* Participating Institutions Section */
+.participating-institutions {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+}
+
+.institutions-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.institutions-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group, .search-group {
+    margin: 10px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.filter-group select, .search-group input {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.search-group {
+    display: flex;
+    align-items: center;
+}
+
+.search-group input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+.search-group button {
+    padding: 10px 15px;
+    background-color: #1a3c6e;
+    color: white;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-group button:hover {
+    background-color: #15305a;
+}
+
+.institutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.institution-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.institution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.institution-logo {
+    height: 120px;
+    background-color: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-placeholder {
+    width: 80px;
+    height: 80px;
+    background-color: #1a3c6e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.logo-placeholder i {
+    font-size: 2.5rem;
+}
+
+.institution-details {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.institution-details h3 {
+    color: #1a3c6e;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.institution-location {
+    color: #555;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.institution-location i {
+    margin-right: 8px;
+    color: #FFD700;
+}
+
+.institution-description {
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.institution-stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a3c6e;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 5px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn.active {
+    background-color: #1a3c6e;
+    color: white;
+    border-color: #1a3c6e;
+}
+
+.pagination-btn:hover:not(.active):not([disabled]) {
+    background-color: #f0f7ff;
+    border-color: #1a3c6e;
+}
+
+.pagination-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Join Program Section */
+.join-program {
+    padding: 70px 0;
+    background-color: white;
+}
+
+.join-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 40px;
+}
+
+.join-text {
+    flex: 1 1 400px;
+}
+
+.join-text h2 {
+    color: #1a3c6e;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.join-text p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.join-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.join-benefits li {
+    padding: 10px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.join-benefits li i {
+    color: #1a3c6e;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.join-form {
+    flex: 1 1 500px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-placeholder h3 {
+    color: #1a3c6e;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1a3c6e;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.radio-group input {
+    margin-right: 8px;
+    width: auto;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-primary {
+    background-color: #1a3c6e;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #15305a;
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 70px 0;
+    background-color: #f9f9f9;
+}
+
+.stories-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.story-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.story-image {
+    height: 200px;
+    background-color: #f0f7ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #1a3c6e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.image-placeholder i {
+    font-size: 3rem;
+}
+
+.story-content {
+    padding: 30px;
+}
+
+.story-content h3 {
+    color: #1a3c6e;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.story-content p {
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.story-author {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.author-name {
+    color: #1a3c6e;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.author-position {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.story-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #1a3c6e;
+    color: white;
+    border-color: #1a3c6e;
+}
+
+.story-indicators {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #1a3c6e;
+    transform: scale(1.2);
+}
+
+/* Research & Resources Section */
+.research-resources {
+    padding: 70px 0;
+    background-color: white;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.resource-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+    width: 80px;
+    background-color: #1a3c6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.resource-icon i {
+    font-size: 2rem;
+}
+
+.resource-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.resource-content h3 {
+    color: #1a3c6e;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.resource-content p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #1a3c6e;
+    border-radius: 30px;
+    color: #1a3c6e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #1a3c6e;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .join-content {
+        flex-direction: column;
+    }
+    
+    .institutions-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .page-banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header h2,
+    .intro-content h2,
+    .join-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .institutions-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group, .search-group {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .filter-group select, .search-group input {
+        width: 100%;
+        min-width: unset;
+    }
+    
+    .story-card {
+        flex-direction: column;
+    }
+    
+    .resource-card {
+        flex-direction: column;
+    }
+    
+    .resource-icon {
+        width: 100%;
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-banner {
+        padding: 60px 0;
+    }
+    
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+    
+    .institutions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-card,
+    .program-card {
+        max-width: 100%;
+    }
+    
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+}
