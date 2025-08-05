@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Calendar - Haryana Chess Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html" class="active">Tournament Calendar</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="rulebook.html">Rulebook</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active">ENG</button>
+                    <button class="lang-btn">हिंदी</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Tournament Calendar</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Tournament Calendar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Controls -->
+    <section class="calendar-controls">
+        <div class="container">
+            <div class="calendar-filters">
+                <div class="filter-group">
+                    <label for="year-select">Year</label>
+                    <select id="year-select" class="filter-select">
+                        <option value="2023" selected>2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="month-select">Month</label>
+                    <select id="month-select" class="filter-select">
+                        <option value="all" selected>All Months</option>
+                        <option value="01">January</option>
+                        <option value="02">February</option>
+                        <option value="03">March</option>
+                        <option value="04">April</option>
+                        <option value="05">May</option>
+                        <option value="06">June</option>
+                        <option value="07">July</option>
+                        <option value="08">August</option>
+                        <option value="09">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="category-select">Category</label>
+                    <select id="category-select" class="filter-select">
+                        <option value="all" selected>All Categories</option>
+                        <option value="state">State Championship</option>
+                        <option value="district">District Level</option>
+                        <option value="junior">Junior</option>
+                        <option value="women">Women</option>
+                        <option value="open">Open</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location-select">Location</label>
+                    <select id="location-select" class="filter-select">
+                        <option value="all" selected>All Locations</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="panchkula">Panchkula</option>
+                        <option value="hisar">Hisar</option>
+                        <option value="ambala">Ambala</option>
+                        <option value="karnal">Karnal</option>
+                        <option value="panipat">Panipat</option>
+                    </select>
+                </div>
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="list">
+                    <i class="fas fa-list"></i> List View
+                </button>
+                <button class="view-btn" data-view="calendar">
+                    <i class="fas fa-calendar-alt"></i> Calendar View
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- List View -->
+    <section class="tournament-list view-active" id="list-view">
+        <div class="container">
+            <h2 class="section-title">Upcoming Tournaments</h2>
+            
+            <div class="tournament-cards">
+                <!-- June 2023 -->
+                <div class="tournament-card" data-month="06" data-category="state" data-location="gurugram">
+                    <div class="tournament-date">
+                        <div class="month">JUN</div>
+                        <div class="day">15</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Haryana State Championship</h3>
+                            <span class="tournament-badge state">State</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Gurugram</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>June 15-18, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Classical</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹1,00,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>The premier chess event in Haryana featuring the state's top players competing for the state champion title.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="registration.html" class="btn primary-btn">Register Now</a>
+                            <a href="#" class="btn secondary-btn">Details</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge open">Registration Open</span>
+                            <span class="deadline">Closes: June 10, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- July 2023 -->
+                <div class="tournament-card" data-month="07" data-category="junior" data-location="panchkula">
+                    <div class="tournament-date">
+                        <div class="month">JUL</div>
+                        <div class="day">08</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Junior Chess Tournament</h3>
+                            <span class="tournament-badge junior">Junior</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Panchkula</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>July 8-9, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Rapid</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹50,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>A special tournament for players under 16 years of age to promote chess among the youth of Haryana.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="registration.html" class="btn primary-btn">Register Now</a>
+                            <a href="#" class="btn secondary-btn">Details</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge open">Registration Open</span>
+                            <span class="deadline">Closes: July 5, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- August 2023 -->
+                <div class="tournament-card" data-month="08" data-category="open" data-location="hisar">
+                    <div class="tournament-date">
+                        <div class="month">AUG</div>
+                        <div class="day">22</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Rapid Chess Championship</h3>
+                            <span class="tournament-badge open">Open</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Hisar</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>August 22, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Rapid</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹30,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>A one-day rapid chess tournament open to all players. Great opportunity for chess enthusiasts of all levels.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="registration.html" class="btn primary-btn">Register Now</a>
+                            <a href="#" class="btn secondary-btn">Details</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge open">Registration Open</span>
+                            <span class="deadline">Closes: August 20, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- September 2023 -->
+                <div class="tournament-card" data-month="09" data-category="women" data-location="ambala">
+                    <div class="tournament-date">
+                        <div class="month">SEP</div>
+                        <div class="day">10</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Women's Chess Championship</h3>
+                            <span class="tournament-badge women">Women</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ambala</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>September 10-12, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Classical</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹75,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>A prestigious tournament exclusively for women chess players to promote female participation in chess.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="registration.html" class="btn primary-btn">Register Now</a>
+                            <a href="#" class="btn secondary-btn">Details</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge upcoming">Registration Opens: August 1</span>
+                            <span class="deadline">Closes: September 5, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- October 2023 -->
+                <div class="tournament-card" data-month="10" data-category="district" data-location="karnal">
+                    <div class="tournament-date">
+                        <div class="month">OCT</div>
+                        <div class="day">05</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Karnal District Championship</h3>
+                            <span class="tournament-badge district">District</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Karnal</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>October 5-6, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Classical</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹25,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>District level championship for players from Karnal. Top performers will qualify for the state championship.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="registration.html" class="btn primary-btn">Register Now</a>
+                            <a href="#" class="btn secondary-btn">Details</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge upcoming">Registration Opens: September 1</span>
+                            <span class="deadline">Closes: October 3, 2023</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- November 2023 -->
+                <div class="tournament-card" data-month="11" data-category="open" data-location="panipat">
+                    <div class="tournament-date">
+                        <div class="month">NOV</div>
+                        <div class="day">18</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Panipat Open Blitz</h3>
+                            <span class="tournament-badge open">Open</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Panipat</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>November 18, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Blitz</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹20,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>A fast-paced blitz tournament open to all players. Test your quick thinking and tactical skills!</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="registration.html" class="btn primary-btn">Register Now</a>
+                            <a href="#" class="btn secondary-btn">Details</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge upcoming">Registration Opens: October 15</span>
+                            <span class="deadline">Closes: November 15, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title mt-5">Past Tournaments</h2>
+            
+            <div class="tournament-cards past-tournaments">
+                <!-- May 2023 -->
+                <div class="tournament-card" data-month="05" data-category="district" data-location="panipat">
+                    <div class="tournament-date">
+                        <div class="month">MAY</div>
+                        <div class="day">28</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Panipat District Championship</h3>
+                            <span class="tournament-badge district">District</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Panipat</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>May 28-29, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Classical</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹25,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>District level championship for players from Panipat. Top performers qualified for the state championship.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="results.html" class="btn primary-btn">View Results</a>
+                            <a href="#" class="btn secondary-btn">Gallery</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge completed">Completed</span>
+                            <span class="winner">Winner: Rahul Sharma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- May 2023 -->
+                <div class="tournament-card" data-month="05" data-category="open" data-location="ambala">
+                    <div class="tournament-date">
+                        <div class="month">MAY</div>
+                        <div class="day">15</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Ambala Open</h3>
+                            <span class="tournament-badge open">Open</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ambala</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>May 15-16, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Rapid</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹30,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>An open rapid chess tournament that attracted players from all over Haryana and neighboring states.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="results.html" class="btn primary-btn">View Results</a>
+                            <a href="#" class="btn secondary-btn">Gallery</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge completed">Completed</span>
+                            <span class="winner">Winner: Priya Gupta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- April 2023 -->
+                <div class="tournament-card" data-month="04" data-category="junior" data-location="karnal">
+                    <div class="tournament-date">
+                        <div class="month">APR</div>
+                        <div class="day">30</div>
+                        <div class="year">2023</div>
+                    </div>
+                    <div class="tournament-details">
+                        <div class="tournament-header">
+                            <h3 class="tournament-title">Karnal Junior Tournament</h3>
+                            <span class="tournament-badge junior">Junior</span>
+                        </div>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Karnal</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-day"></i>
+                                <span>April 30, 2023</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-chess"></i>
+                                <span>Rapid</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Prize: ₹15,000</span>
+                            </div>
+                        </div>
+                        <div class="tournament-description">
+                            <p>A tournament for young chess players under 14 years of age to encourage youth participation in chess.</p>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="results.html" class="btn primary-btn">View Results</a>
+                            <a href="#" class="btn secondary-btn">Gallery</a>
+                        </div>
+                        <div class="registration-status">
+                            <span class="status-badge completed">Completed</span>
+                            <span class="winner">Winner: Vikram Singh</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar View -->
+    <section class="tournament-calendar" id="calendar-view">
+        <div class="container">
+            <div class="calendar-header">
+                <h2 class="current-month">June 2023</h2>
+                <div class="calendar-navigation">
+                    <button class="nav-btn prev-month"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-btn next-month"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="calendar-weekdays">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days">
+                    <!-- Calendar days will be generated by JavaScript -->
+                    <!-- Example structure -->
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day empty"></div>
+                    <div class="calendar-day">1</div>
+                    <div class="calendar-day">2</div>
+                    <div class="calendar-day">3</div>
+                    <div class="calendar-day">4</div>
+                    <div class="calendar-day">5</div>
+                    <div class="calendar-day">6</div>
+                    <div class="calendar-day">7</div>
+                    <div class="calendar-day">8</div>
+                    <div class="calendar-day">9</div>
+                    <div class="calendar-day">10</div>
+                    <div class="calendar-day">11</div>
+                    <div class="calendar-day">12</div>
+                    <div class="calendar-day">13</div>
+                    <div class="calendar-day">14</div>
+                    <div class="calendar-day has-event">15
+                        <div class="day-event state">State Championship</div>
+                    </div>
+                    <div class="calendar-day has-event">16
+                        <div class="day-event state">State Championship</div>
+                    </div>
+                    <div class="calendar-day has-event">17
+                        <div class="day-event state">State Championship</div>
+                    </div>
+                    <div class="calendar-day has-event">18
+                        <div class="day-event state">State Championship</div>
+                    </div>
+                    <div class="calendar-day">19</div>
+                    <div class="calendar-day">20</div>
+                    <div class="calendar-day">21</div>
+                    <div class="calendar-day">22</div>
+                    <div class="calendar-day">23</div>
+                    <div class="calendar-day">24</div>
+                    <div class="calendar-day">25</div>
+                    <div class="calendar-day">26</div>
+                    <div class="calendar-day">27</div>
+                    <div class="calendar-day">28</div>
+                    <div class="calendar-day">29</div>
+                    <div class="calendar-day">30</div>
+                </div>
+            </div>
+            
+            <div class="event-details-panel">
+                <h3>Events on June 15, 2023</h3>
+                <div class="event-list">
+                    <div class="event-item">
+                        <div class="event-color state"></div>
+                        <div class="event-info">
+                            <h4>Haryana State Championship</h4>
+                            <p><i class="fas fa-map-marker-alt"></i> Gurugram</p>
+                            <p><i class="fas fa-calendar-day"></i> June 15-18, 2023</p>
+                            <a href="#" class="event-link">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Calendar Section -->
+    <section class="download-calendar">
+        <div class="container">
+            <div class="download-content">
+                <div class="download-text">
+                    <h2>Download Tournament Calendar</h2>
+                    <p>Get the complete tournament schedule for 2023 in your preferred format</p>
+                </div>
+                <div class="download-buttons">
+                    <a href="#" class="btn secondary-btn"><i class="far fa-calendar-alt"></i> iCalendar</a>
+                    <a href="#" class="btn secondary-btn"><i class="far fa-file-pdf"></i> PDF</a>
+                    <a href="#" class="btn secondary-btn"><i class="far fa-file-excel"></i> Excel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="logo.png" alt="Haryana Chess Association Logo">
+                        </div>
+                        <p class="footer-description">Promoting chess excellence across Haryana since 1982</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="results.html">Results</a></li>
+                            <li><a href="rulebook.html">Rulebook</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Contact Us</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i> HCA Office, Sector 12, Panchkula, Haryana</li>
+                            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                            <li><i class="fas fa-envelope"></i> info@haryanachess.org</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2023 Haryana Chess Association. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="/admin-login" class="admin-link">Admin Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Haryana Chess Association</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resources.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="calendar.html">Calendar</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="active"><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिन्दी</option>
+                    </select>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Chess Resources</h1>
+            <p>Access rules, regulations, learning materials, forms, and useful links for chess players and officials.</p>
+        </div>
+    </section>
+
+    <!-- Rules & Regulations -->
+    <section class="rules-section">
+        <div class="container">
+            <h2>Rules & Regulations</h2>
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <div class="rule-content">
+                        <h3>FIDE Laws of Chess</h3>
+                        <p>The official rules of chess as established by the International Chess Federation (FIDE).</p>
+                        <a href="#" class="btn btn-outline">View Rules</a>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="rule-content">
+                        <h3>Tournament Regulations</h3>
+                        <p>Guidelines and regulations for participating in tournaments organized by Haryana Chess Association.</p>
+                        <a href="#" class="btn btn-outline">View Regulations</a>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="rule-content">
+                        <h3>Rating System</h3>
+                        <p>Explanation of the chess rating system, how ratings are calculated, and rating categories.</p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="rule-content">
+                        <h3>Code of Conduct</h3>
+                        <p>Expected behavior for players, coaches, officials, and spectators at chess events.</p>
+                        <a href="#" class="btn btn-outline">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Materials -->
+    <section class="learning-section">
+        <div class="container">
+            <h2>Learning Materials</h2>
+            <div class="learning-tabs">
+                <button class="tab-btn active" data-tab="beginners">Beginners</button>
+                <button class="tab-btn" data-tab="intermediate">Intermediate</button>
+                <button class="tab-btn" data-tab="advanced">Advanced</button>
+                <button class="tab-btn" data-tab="coaching">Coaching</button>
+            </div>
+            <div class="learning-content">
+                <div id="beginners" class="tab-content active">
+                    <div class="learning-grid">
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess-pawn"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Chess Basics</h3>
+                                <p>Learn how the pieces move, basic rules, and simple strategies for beginners.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess-knight"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Basic Tactics</h3>
+                                <p>Introduction to forks, pins, skewers, and other fundamental tactical patterns.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess-rook"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Opening Principles</h3>
+                                <p>Learn the fundamental principles of chess openings and common mistakes to avoid.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="intermediate" class="tab-content">
+                    <div class="learning-grid">
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess-bishop"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Positional Play</h3>
+                                <p>Understanding pawn structures, piece coordination, and strategic planning.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess-queen"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Tactical Patterns</h3>
+                                <p>Advanced tactical motifs including combinations, sacrifices, and attacking patterns.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Endgame Essentials</h3>
+                                <p>Essential endgame techniques and principles for improving your endgame play.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="advanced" class="tab-content">
+                    <div class="learning-grid">
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chess-king"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Advanced Strategy</h3>
+                                <p>Complex strategic concepts, long-term planning, and positional sacrifices.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Calculation Training</h3>
+                                <p>Methods to improve calculation skills, visualization, and candidate moves selection.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Opening Repertoire</h3>
+                                <p>Building and maintaining a personalized opening repertoire for competitive play.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="coaching" class="tab-content">
+                    <div class="learning-grid">
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Coaching Resources</h3>
+                                <p>Materials and guides for chess coaches to effectively teach students of all levels.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Training Programs</h3>
+                                <p>Structured training programs and curriculum for chess schools and academies.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="learning-card">
+                            <div class="learning-image">
+                                <div class="learning-placeholder">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                            </div>
+                            <div class="learning-info">
+                                <h3>Certification</h3>
+                                <p>Information about coach certification programs and requirements.</p>
+                                <a href="#" class="btn btn-outline">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloadable Forms -->
+    <section class="forms-section">
+        <div class="container">
+            <h2>Downloadable Forms</h2>
+            <div class="forms-grid">
+                <div class="form-card">
+                    <div class="form-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="form-content">
+                        <h3>Player Registration</h3>
+                        <p>Form for new player registration with Haryana Chess Association.</p>
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> DOCX</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <div class="form-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <div class="form-content">
+                        <h3>Tournament Entry</h3>
+                        <p>Form for entering tournaments organized by Haryana Chess Association.</p>
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> DOCX</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <div class="form-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <div class="form-content">
+                        <h3>ID Card Application</h3>
+                        <p>Form for applying for a Haryana Chess Association ID card.</p>
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> DOCX</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <div class="form-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="form-content">
+                        <h3>Tournament Hosting</h3>
+                        <p>Form for clubs or organizations to apply for hosting a tournament.</p>
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> DOCX</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <div class="form-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="form-content">
+                        <h3>Coach Registration</h3>
+                        <p>Form for registering as a chess coach with Haryana Chess Association.</p>
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> DOCX</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <div class="form-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="form-content">
+                        <h3>Club Affiliation</h3>
+                        <p>Form for chess clubs to apply for affiliation with Haryana Chess Association.</p>
+                        <div class="form-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> PDF</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> DOCX</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Useful Links -->
+    <section class="links-section">
+        <div class="container">
+            <h2>Useful Links</h2>
+            <div class="links-grid">
+                <div class="link-category">
+                    <h3><i class="fas fa-globe"></i> Chess Organizations</h3>
+                    <ul class="links-list">
+                        <li>
+                            <a href="https://fide.com" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">FIDE - International Chess Federation</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://aicf.in" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">All India Chess Federation</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Asian Chess Federation</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Commonwealth Chess Association</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-category">
+                    <h3><i class="fas fa-graduation-cap"></i> Learning Resources</h3>
+                    <ul class="links-list">
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Chess.com</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Lichess.org</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">ChessBase India</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Chess24</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-category">
+                    <h3><i class="fas fa-newspaper"></i> Chess News</h3>
+                    <ul class="links-list">
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">ChessBase</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Chess.com News</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">FIDE News</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">The Week in Chess</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-category">
+                    <h3><i class="fas fa-tools"></i> Chess Tools</h3>
+                    <ul class="links-list">
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">FIDE Rating Calculator</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Chess Tournament Software</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Opening Explorer</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <span class="link-title">Endgame Tablebase</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chess Books -->
+    <section class="books-section">
+        <div class="container">
+            <h2>Recommended Chess Books</h2>
+            <div class="books-slider">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="book-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>My System</h3>
+                        <p class="book-author">by Aron Nimzowitsch</p>
+                        <p class="book-description">A classic chess strategy book that has influenced generations of players.</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="book-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Zurich International Chess Tournament 1953</h3>
+                        <p class="book-author">by David Bronstein</p>
+                        <p class="book-description">Detailed analysis of one of the strongest tournaments in chess history.</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="book-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Bobby Fischer Teaches Chess</h3>
+                        <p class="book-author">by Bobby Fischer</p>
+                        <p class="book-description">A programmed learning approach to tactical patterns and checkmates.</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="book-card">
+                    <div class="book-cover">
+                        <div class="book-placeholder">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h3>Logical Chess: Move by Move</h3>
+                        <p class="book-author">by Irving Chernev</p>
+                        <p class="book-description">Every move of 33 classic games explained in detail for beginners.</p>
+                        <div class="book-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="logo.png" alt="Haryana Chess Association Logo">
+                        </div>
+                        <p>Promoting chess excellence across Haryana through tournaments, training, and community engagement.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="players.html">Players</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="resources.html">Resources</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Rules & Regulations</a></li>
+                            <li><a href="#">Learning Materials</a></li>
+                            <li><a href="#">Downloadable Forms</a></li>
+                            <li><a href="#">Chess Books</a></li>
+                            <li><a href="#">Useful Links</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Contact Us</h3>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt"></i> 123 Chess Street, Panchkula, Haryana, India</p>
+                            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                            <p><i class="fas fa-envelope"></i> info@haryanachess.org</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Haryana Chess Association. All rights reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/resources.js"></script>
+</body>
+</html>

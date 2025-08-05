@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings & News - Haryana Chess Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rankings-news.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Tournament Calendar</a></li>
+                    <li><a href="pairings-results.html">Pairings & Results</a></li>
+                    <li><a href="rulebook.html">Rulebook</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html" class="active">Rankings & News</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active">ENG</button>
+                    <button class="lang-btn">हिंदी</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Rankings & News</h1>
+                <p>Stay updated with the latest chess rankings and news from Haryana Chess Association</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Tabs Navigation -->
+        <section class="tabs-section">
+            <div class="container">
+                <div class="tabs-container">
+                    <div class="tabs-nav">
+                        <button class="tab-btn active" data-tab="rankings">Rankings</button>
+                        <button class="tab-btn" data-tab="news">Latest News</button>
+                    </div>
+                    
+                    <!-- Rankings Tab Content -->
+                    <div class="tab-content active" id="rankings-content">
+                        <!-- Rankings Categories -->
+                        <div class="rankings-categories">
+                            <div class="category-filters">
+                                <button class="category-btn active" data-category="open">Open</button>
+                                <button class="category-btn" data-category="women">Women</button>
+                                <button class="category-btn" data-category="junior">Junior</button>
+                                <button class="category-btn" data-category="under18">Under 18</button>
+                                <button class="category-btn" data-category="under14">Under 14</button>
+                                <button class="category-btn" data-category="under10">Under 10</button>
+                            </div>
+                            <div class="rankings-search">
+                                <input type="text" placeholder="Search player..." id="player-search">
+                                <button><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Rankings Table -->
+                        <div class="rankings-table-container">
+                            <table class="rankings-table">
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Player</th>
+                                        <th>District</th>
+                                        <th>Rating</th>
+                                        <th>Rating Change</th>
+                                        <th>Last Tournament</th>
+                                        <th>Title</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rankings-body">
+                                    <!-- Sample data for Open category -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player1.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=1234">Vikas Sharma</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Gurugram</td>
+                                        <td>2245</td>
+                                        <td class="positive">+15</td>
+                                        <td>Haryana State Championship</td>
+                                        <td>FM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player2.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=2345">Rajesh Kumar</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Panchkula</td>
+                                        <td>2198</td>
+                                        <td class="negative">-7</td>
+                                        <td>Delhi International Open</td>
+                                        <td>CM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player3.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=3456">Amit Singh</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Faridabad</td>
+                                        <td>2176</td>
+                                        <td class="positive">+12</td>
+                                        <td>Gurugram Open</td>
+                                        <td>CM</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player4.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=4567">Deepak Verma</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Karnal</td>
+                                        <td>2154</td>
+                                        <td class="positive">+5</td>
+                                        <td>National B Championship</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player5.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=5678">Sanjay Yadav</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Rohtak</td>
+                                        <td>2132</td>
+                                        <td class="negative">-3</td>
+                                        <td>Haryana State Championship</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player6.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=6789">Rahul Gupta</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Ambala</td>
+                                        <td>2098</td>
+                                        <td class="positive">+8</td>
+                                        <td>Gurugram Open</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player7.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=7890">Manoj Tiwari</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Hisar</td>
+                                        <td>2087</td>
+                                        <td class="positive">+11</td>
+                                        <td>National B Championship</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player8.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=8901">Vikram Joshi</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Sonipat</td>
+                                        <td>2065</td>
+                                        <td class="negative">-5</td>
+                                        <td>Delhi International Open</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player9.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=9012">Suresh Chand</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Panipat</td>
+                                        <td>2043</td>
+                                        <td class="positive">+7</td>
+                                        <td>Haryana State Championship</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>
+                                            <div class="player-info">
+                                                <div class="player-avatar">
+                                                    <img src="assets/player-avatars/player10.jpg" alt="Player" onerror="this.src='assets/default-avatar.png'">
+                                                </div>
+                                                <div class="player-name">
+                                                    <a href="ratings.html?id=0123">Pawan Malhotra</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Kurukshetra</td>
+                                        <td>2021</td>
+                                        <td class="positive">+3</td>
+                                        <td>Gurugram Open</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn">5</button>
+                            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <!-- Rankings Info -->
+                        <div class="rankings-info">
+                            <div class="info-box">
+                                <h3><i class="fas fa-info-circle"></i> About Rankings</h3>
+                                <p>The Haryana Chess Association rankings are updated monthly based on tournament results and FIDE/AICF rating changes. Players must have participated in at least one rated tournament in the past 12 months to be included in the rankings.</p>
+                                <p>For more detailed player information, click on a player's name to view their complete profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- News Tab Content -->
+                    <div class="tab-content" id="news-content">
+                        <!-- News Filters -->
+                        <div class="news-filters">
+                            <div class="filter-options">
+                                <div class="filter-group">
+                                    <label for="category-filter">Category:</label>
+                                    <select id="category-filter">
+                                        <option value="all">All Categories</option>
+                                        <option value="announcements">Announcements</option>
+                                        <option value="tournaments">Tournaments</option>
+                                        <option value="results">Results</option>
+                                        <option value="players">Players</option>
+                                        <option value="press">Press Releases</option>
+                                    </select>
+                                </div>
+                                <div class="filter-group">
+                                    <label for="year-filter">Year:</label>
+                                    <select id="year-filter">
+                                        <option value="all">All Years</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2020">2020</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="search-box">
+                                <input type="text" id="news-search" placeholder="Search news...">
+                                <button id="search-btn"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                        
+                        <!-- Featured News -->
+                        <div class="featured-news">
+                            <div class="featured-news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-chess-king"></i>
+                                        <span>Featured Image</span>
+                                    </div>
+                                    <div class="news-category">Tournament</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">June 15, 2023</div>
+                                    <h3>Haryana State Chess Championship 2023 Announced</h3>
+                                    <p>The Haryana Chess Association is proud to announce the dates for the prestigious Haryana State Chess Championship 2023. The tournament will be held from July 15-20, 2023 in Panchkula.</p>
+                                    <p>This year's championship will feature separate sections for Open, Women, and Junior categories, with attractive prize funds and FIDE rating opportunities. The tournament will serve as a qualifier for the National Championship.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- News Grid -->
+                        <div class="news-grid">
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-trophy"></i>
+                                        <span>News Image</span>
+                                    </div>
+                                    <div class="news-category">Results</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">June 10, 2023</div>
+                                    <h3>Rajesh Sharma Wins Gurugram Open</h3>
+                                    <p>Rajesh Sharma emerged as the champion of the Gurugram Open Chess Tournament, defeating 86 players from across the state.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-chess-queen"></i>
+                                        <span>News Image</span>
+                                    </div>
+                                    <div class="news-category">Players</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">June 5, 2023</div>
+                                    <h3>Ananya Gupta Achieves Woman FIDE Master Title</h3>
+                                    <p>Haryana's rising star Ananya Gupta has achieved the Woman FIDE Master title after her exceptional performance in the National Championship.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-chess-board"></i>
+                                        <span>News Image</span>
+                                    </div>
+                                    <div class="news-category">Announcement</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">June 1, 2023</div>
+                                    <h3>HCA Launches New Website</h3>
+                                    <p>The Haryana Chess Association is pleased to announce the launch of its new official website, designed to better serve the chess community of Haryana.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-medal"></i>
+                                        <span>News Image</span>
+                                    </div>
+                                    <div class="news-category">Tournament</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">May 25, 2023</div>
+                                    <h3>Faridabad to Host Junior Chess Championship</h3>
+                                    <p>The Haryana Junior Chess Championship will be held in Faridabad from June 10-12, 2023. Registration is now open for all eligible junior players.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-chess-knight"></i>
+                                        <span>News Image</span>
+                                    </div>
+                                    <div class="news-category">Press Release</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">May 20, 2023</div>
+                                    <h3>HCA Signs MoU with Schools to Promote Chess</h3>
+                                    <p>The Haryana Chess Association has signed a Memorandum of Understanding with 50 schools across the state to promote chess as part of the curriculum.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            
+                            <div class="news-card">
+                                <div class="news-image">
+                                    <div class="image-placeholder">
+                                        <i class="fas fa-user-graduate"></i>
+                                        <span>News Image</span>
+                                    </div>
+                                    <div class="news-category">Announcement</div>
+                                </div>
+                                <div class="news-content">
+                                    <div class="news-date">May 15, 2023</div>
+                                    <h3>Chess Coaching Camp Announced for Summer</h3>
+                                    <p>HCA will organize a summer coaching camp for young chess enthusiasts from June 1-15, 2023. The camp will feature sessions by titled players and experienced coaches.</p>
+                                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                            <button class="pagination-btn active">1</button>
+                            <button class="pagination-btn">2</button>
+                            <button class="pagination-btn">3</button>
+                            <button class="pagination-btn">4</button>
+                            <button class="pagination-btn">5</button>
+                            <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        
+                        <!-- Newsletter Subscription -->
+                        <div class="newsletter-section">
+                            <div class="newsletter-content">
+                                <h3><i class="fas fa-envelope"></i> Subscribe to Our Newsletter</h3>
+                                <p>Stay updated with the latest chess news, tournament announcements, and player achievements from Haryana Chess Association.</p>
+                                <ul class="newsletter-benefits">
+                                    <li><i class="fas fa-check"></i> Tournament announcements before public release</li>
+                                    <li><i class="fas fa-check"></i> Exclusive interviews with top players</li>
+                                    <li><i class="fas fa-check"></i> Chess puzzles and training tips</li>
+                                    <li><i class="fas fa-check"></i> Special offers for HCA events</li>
+                                </ul>
+                            </div>
+                            <div class="newsletter-form">
+                                <form id="subscribe-form">
+                                    <div class="form-group">
+                                        <label for="subscriber-name">Your Name</label>
+                                        <input type="text" id="subscriber-name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="subscriber-email">Email Address</label>
+                                        <input type="email" id="subscriber-email" name="email" required>
+                                    </div>
+                                    <div class="form-group checkbox-group">
+                                        <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                                        <label for="privacy-consent">I agree to receive newsletters and accept the <a href="#">privacy policy</a></label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="logo.png" alt="Haryana Chess Association Logo">
+                        </div>
+                        <p class="footer-description">Promoting chess excellence across Haryana since 1982</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="results.html">Results</a></li>
+                            <li><a href="rulebook.html">Rulebook</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Contact Us</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Chess Street, Panchkula, Haryana, India</li>
+                            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                            <li><i class="fas fa-envelope"></i> info@haryanachess.org</li>
+                        </ul>
+                        <div class="office-hours">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                            <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Haryana Chess Association. All rights reserved.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/rankings-news.js"></script>
+</body>
+</html>

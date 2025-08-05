@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players - Haryana Chess Association</title>
+    <meta name="description" content="Discover top chess players from Haryana, their profiles, ratings, achievements, and tournament history.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/players.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="results.html">Results</a></li>
+                    <li><a href="rulebook.html">Rulebook</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active">ENG</button>
+                    <button class="lang-btn">हिंदी</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Chess Players</h1>
+            <p>Discover the talented chess players representing Haryana</p>
+        </div>
+    </section>
+
+    <!-- Player Search & Filters -->
+    <section class="player-filters">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="player-search" placeholder="Search by name, city, or rating...">
+                    <button type="button" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="open">Open</option>
+                        <option value="women">Women</option>
+                        <option value="under-20">Under 20</option>
+                        <option value="under-18">Under 18</option>
+                        <option value="under-16">Under 16</option>
+                        <option value="under-14">Under 14</option>
+                        <option value="under-12">Under 12</option>
+                        <option value="under-10">Under 10</option>
+                        <option value="under-8">Under 8</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="district-filter">District:</label>
+                    <select id="district-filter" class="filter-select">
+                        <option value="all">All Districts</option>
+                        <option value="ambala">Ambala</option>
+                        <option value="bhiwani">Bhiwani</option>
+                        <option value="faridabad">Faridabad</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="hisar">Hisar</option>
+                        <option value="jhajjar">Jhajjar</option>
+                        <option value="jind">Jind</option>
+                        <option value="karnal">Karnal</option>
+                        <option value="kurukshetra">Kurukshetra</option>
+                        <option value="panchkula">Panchkula</option>
+                        <option value="panipat">Panipat</option>
+                        <option value="rohtak">Rohtak</option>
+                        <option value="sirsa">Sirsa</option>
+                        <option value="sonipat">Sonipat</option>
+                        <option value="yamunanagar">Yamunanagar</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="rating-filter">Rating:</label>
+                    <select id="rating-filter" class="filter-select">
+                        <option value="all">All Ratings</option>
+                        <option value="2200+">2200+</option>
+                        <option value="2000-2199">2000-2199</option>
+                        <option value="1800-1999">1800-1999</option>
+                        <option value="1600-1799">1600-1799</option>
+                        <option value="1400-1599">1400-1599</option>
+                        <option value="1200-1399">1200-1399</option>
+                        <option value="1000-1199">1000-1199</option>
+                        <option value="<1000">Below 1000</option>
+                        <option value="unrated">Unrated</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="title-filter">Title:</label>
+                    <select id="title-filter" class="filter-select">
+                        <option value="all">All Titles</option>
+                        <option value="gm">Grandmaster (GM)</option>
+                        <option value="im">International Master (IM)</option>
+                        <option value="fm">FIDE Master (FM)</option>
+                        <option value="cm">Candidate Master (CM)</option>
+                        <option value="wgm">Woman Grandmaster (WGM)</option>
+                        <option value="wim">Woman International Master (WIM)</option>
+                        <option value="wfm">Woman FIDE Master (WFM)</option>
+                        <option value="wcm">Woman Candidate Master (WCM)</option>
+                        <option value="none">No Title</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="view-options">
+                <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th"></i> Grid
+                </button>
+                <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i> List
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Players -->
+    <section class="featured-players">
+        <div class="container">
+            <h2>Featured Players</h2>
+            <div class="featured-players-slider">
+                <div class="featured-player-card">
+                    <div class="player-image">
+                        <div class="player-placeholder">
+                            <i class="fas fa-chess-king"></i>
+                        </div>
+                        <div class="player-title">GM</div>
+                    </div>
+                    <div class="player-info">
+                        <h3>Vidit Gujrathi</h3>
+                        <div class="player-rating">FIDE: 2727</div>
+                        <div class="player-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Gurugram</span>
+                            <span><i class="fas fa-trophy"></i> 3 Championships</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="featured-player-card">
+                    <div class="player-image">
+                        <div class="player-placeholder">
+                            <i class="fas fa-chess-queen"></i>
+                        </div>
+                        <div class="player-title">WGM</div>
+                    </div>
+                    <div class="player-info">
+                        <h3>Tania Sachdev</h3>
+                        <div class="player-rating">FIDE: 2392</div>
+                        <div class="player-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Panchkula</span>
+                            <span><i class="fas fa-trophy"></i> 5 Championships</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+                
+                <div class="featured-player-card">
+                    <div class="player-image">
+                        <div class="player-placeholder">
+                            <i class="fas fa-chess-rook"></i>
+                        </div>
+                        <div class="player-title">IM</div>
+                    </div>
+                    <div class="player-info">
+                        <h3>Prithu Gupta</h3>
+                        <div class="player-rating">FIDE: 2553</div>
+                        <div class="player-details">
+                            <span><i class="fas fa-map-marker-alt"></i> Faridabad</span>
+                            <span><i class="fas fa-trophy"></i> 2 Championships</span>
+                        </div>
+                        <a href="#" class="btn btn-outline">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Players Grid -->
+    <section class="players-section">
+        <div class="container">
+            <h2>All Players</h2>
+            <div class="players-container grid-view" id="players-container">
+                <!-- Players will be dynamically generated by JavaScript -->
+                <!-- Placeholder for demonstration -->
+                <div class="player-card" data-category="open" data-district="gurugram" data-rating="2200+" data-title="gm">
+                    <div class="player-header">
+                        <div class="player-image">
+                            <div class="player-placeholder">
+                                <i class="fas fa-chess-king"></i>
+                            </div>
+                        </div>
+                        <div class="player-title-badge">GM</div>
+                    </div>
+                    <div class="player-body">
+                        <h3 class="player-name">Vidit Gujrathi</h3>
+                        <div class="player-meta">
+                            <div class="player-rating">
+                                <span class="label">FIDE Rating:</span>
+                                <span class="value">2727</span>
+                            </div>
+                            <div class="player-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Gurugram</span>
+                            </div>
+                        </div>
+                        <div class="player-achievements">
+                            <div class="achievement">
+                                <i class="fas fa-trophy"></i>
+                                <span>3x National Champion</span>
+                            </div>
+                            <div class="achievement">
+                                <i class="fas fa-medal"></i>
+                                <span>Olympiad Silver Medalist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-footer">
+                        <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                        <a href="#" class="btn btn-sm btn-primary">Tournament History</a>
+                    </div>
+                </div>
+                
+                <!-- More player cards will be added by JavaScript -->
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="pagination-numbers">
+                    <button class="pagination-number active">1</button>
+                    <button class="pagination-number">2</button>
+                    <button class="pagination-number">3</button>
+                    <span class="pagination-ellipsis">...</span>
+                    <button class="pagination-number">10</button>
+                </div>
+                <button class="pagination-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player Stats -->
+    <section class="player-stats">
+        <div class="container">
+            <h2>Haryana Chess Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="total-players">1,250+</div>
+                        <div class="stat-label">Registered Players</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-chess-king"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="titled-players">35+</div>
+                        <div class="stat-label">Titled Players</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="national-champions">12</div>
+                        <div class="stat-label">National Champions</div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value" id="international-medals">45+</div>
+                        <div class="stat-label">International Medals</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Registered Player -->
+    <section class="become-player">
+        <div class="container">
+            <div class="become-player-content">
+                <h2>Become a Registered Player</h2>
+                <p>Join the Haryana Chess Association and start your journey to chess excellence. Get access to tournaments, training camps, and more.</p>
+                <div class="become-player-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Register</h3>
+                            <p>Complete the registration form with your details</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Verification</h3>
+                            <p>Submit required documents for verification</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Payment</h3>
+                            <p>Pay the registration fee online</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Approval</h3>
+                            <p>Receive your player ID and start playing</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Register Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                    <p>Promoting chess excellence across Haryana</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="players.html">Players</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resources.html#rules">Chess Rules</a></li>
+                            <li><a href="resources.html#ratings">Rating System</a></li>
+                            <li><a href="resources.html#certificates">Certificates</a></li>
+                            <li><a href="resources.html#downloads">Downloads</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="news.html">News & Updates</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Stay updated with the latest chess events and news</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Haryana Chess Association. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Player Profile Modal -->
+    <div class="modal" id="player-profile-modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="player-profile">
+                    <div class="profile-header">
+                        <div class="profile-image">
+                            <div class="player-placeholder">
+                                <i class="fas fa-chess-king"></i>
+                            </div>
+                        </div>
+                        <div class="profile-title-badge">GM</div>
+                        <div class="profile-info">
+                            <h2 class="profile-name">Vidit Gujrathi</h2>
+                            <div class="profile-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Gurugram, Haryana</span>
+                                <span><i class="fas fa-calendar-alt"></i> Born: October 24, 1994</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <div class="stat-label">FIDE Rating</div>
+                            <div class="stat-value">2727</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">National Rank</div>
+                            <div class="stat-value">#3</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">World Rank</div>
+                            <div class="stat-value">#22</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-label">Highest Rating</div>
+                            <div class="stat-value">2735</div>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-tabs">
+                        <button class="tab-btn active" data-tab="bio">Biography</button>
+                        <button class="tab-btn" data-tab="achievements">Achievements</button>
+                        <button class="tab-btn" data-tab="tournaments">Tournaments</button>
+                        <button class="tab-btn" data-tab="stats">Statistics</button>
+                    </div>
+                    
+                    <div class="profile-tab-content">
+                        <div class="tab-pane active" id="bio-tab">
+                            <p>Vidit Santosh Gujrathi is an Indian chess grandmaster. He achieved the title of Grandmaster in January 2013, becoming the 30th player from India to achieve this title. He is the fourth Indian player to cross the Elo rating threshold of 2700, after Viswanathan Anand, Krishnan Sasikiran and Pentala Harikrishna.</p>
+                            <p>Vidit has represented India at multiple Chess Olympiads and has won several international tournaments. He is known for his solid positional style and endgame technique.</p>
+                        </div>
+                        
+                        <div class="tab-pane" id="achievements-tab">
+                            <ul class="achievements-list">
+                                <li>
+                                    <div class="achievement-year">2019</div>
+                                    <div class="achievement-content">
+                                        <h4>Prague Masters</h4>
+                                        <p>1st Place</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-year">2018</div>
+                                    <div class="achievement-content">
+                                        <h4>Tata Steel Chess Challengers</h4>
+                                        <p>1st Place</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-year">2018</div>
+                                    <div class="achievement-content">
+                                        <h4>Chess Olympiad</h4>
+                                        <p>Bronze Medal (Team)</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="achievement-year">2016</div>
+                                    <div class="achievement-content">
+                                        <h4>Asian Continental Championship</h4>
+                                        <p>Silver Medal</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-pane" id="tournaments-tab">
+                            <div class="tournaments-table-wrapper">
+                                <table class="tournaments-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Tournament</th>
+                                            <th>Location</th>
+                                            <th>Result</th>
+                                            <th>Rating Change</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Jan 2023</td>
+                                            <td>Tata Steel Chess</td>
+                                            <td>Wijk aan Zee, Netherlands</td>
+                                            <td>8th</td>
+                                            <td>-3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dec 2022</td>
+                                            <td>World Rapid Championship</td>
+                                            <td>Almaty, Kazakhstan</td>
+                                            <td>12th</td>
+                                            <td>+5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nov 2022</td>
+                                            <td>Grand Swiss</td>
+                                            <td>Isle of Man</td>
+                                            <td>4th</td>
+                                            <td>+8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sep 2022</td>
+                                            <td>Chess Olympiad</td>
+                                            <td>Chennai, India</td>
+                                            <td>Bronze</td>
+                                            <td>+2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane" id="stats-tab">
+                            <div class="stats-charts">
+                                <div class="chart-container">
+                                    <h4>Rating Progress</h4>
+                                    <div class="chart-placeholder">
+                                        <p>Rating chart will be displayed here</p>
+                                    </div>
+                                </div>
+                                <div class="chart-container">
+                                    <h4>Performance by Opening</h4>
+                                    <div class="chart-placeholder">
+                                        <p>Opening statistics will be displayed here</p>
+                                    </div>
+                                </div>
+                                <div class="chart-container">
+                                    <h4>Win/Loss Ratio</h4>
+                                    <div class="chart-placeholder">
+                                        <p>Win/Loss chart will be displayed here</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/players.js"></script>
+</body>
+</html>

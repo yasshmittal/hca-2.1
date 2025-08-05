@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - Haryana Chess Association</title>
+    <meta name="description" content="Browse photos from chess tournaments, events, and activities organized by the Haryana Chess Association.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Tournament Calendar</a></li>
+                    <li><a href="pairings-results.html">Pairings & Results</a></li>
+                    <li><a href="rulebook.html">Rulebook</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active">ENG</button>
+                    <button class="lang-btn">हिंदी</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Photo Gallery</h1>
+            <p>Capturing moments from chess tournaments and events across Haryana</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="year-filter">Year:</label>
+                    <select id="year-filter" class="filter-select">
+                        <option value="all">All Years</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="event-filter">Event Type:</label>
+                    <select id="event-filter" class="filter-select">
+                        <option value="all">All Events</option>
+                        <option value="tournament">Tournaments</option>
+                        <option value="training">Training Camps</option>
+                        <option value="ceremony">Award Ceremonies</option>
+                        <option value="other">Other Events</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location-filter">Location:</label>
+                    <select id="location-filter" class="filter-select">
+                        <option value="all">All Locations</option>
+                        <option value="panchkula">Panchkula</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="faridabad">Faridabad</option>
+                        <option value="hisar">Hisar</option>
+                        <option value="rohtak">Rohtak</option>
+                    </select>
+                </div>
+            </div>
+            <div class="view-options">
+                <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th"></i> Grid
+                </button>
+                <button class="view-btn" data-view="masonry">
+                    <i class="fas fa-columns"></i> Masonry
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Albums -->
+    <section class="gallery-albums">
+        <div class="container">
+            <h2>Featured Albums</h2>
+            <div class="albums-grid">
+                <div class="album-card" data-year="2023" data-event="tournament" data-location="panchkula">
+                    <div class="album-thumbnail">
+                        <div class="album-placeholder">
+                            <i class="fas fa-chess-king"></i>
+                            <span>State Championship 2023</span>
+                        </div>
+                        <div class="album-overlay">
+                            <span class="album-count"><i class="fas fa-image"></i> 24 Photos</span>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>State Championship 2023</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Panchkula</p>
+                        <p><i class="far fa-calendar-alt"></i> August 15-20, 2023</p>
+                    </div>
+                </div>
+                
+                <div class="album-card" data-year="2023" data-event="training" data-location="gurugram">
+                    <div class="album-thumbnail">
+                        <div class="album-placeholder">
+                            <i class="fas fa-chess-knight"></i>
+                            <span>Summer Training Camp</span>
+                        </div>
+                        <div class="album-overlay">
+                            <span class="album-count"><i class="fas fa-image"></i> 18 Photos</span>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Summer Training Camp</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Gurugram</p>
+                        <p><i class="far fa-calendar-alt"></i> June 5-15, 2023</p>
+                    </div>
+                </div>
+                
+                <div class="album-card" data-year="2022" data-event="tournament" data-location="hisar">
+                    <div class="album-thumbnail">
+                        <div class="album-placeholder">
+                            <i class="fas fa-chess-queen"></i>
+                            <span>Hisar Open 2022</span>
+                        </div>
+                        <div class="album-overlay">
+                            <span class="album-count"><i class="fas fa-image"></i> 32 Photos</span>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Hisar Open 2022</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Hisar</p>
+                        <p><i class="far fa-calendar-alt"></i> November 12-14, 2022</p>
+                    </div>
+                </div>
+                
+                <div class="album-card" data-year="2022" data-event="ceremony" data-location="faridabad">
+                    <div class="album-thumbnail">
+                        <div class="album-placeholder">
+                            <i class="fas fa-trophy"></i>
+                            <span>Annual Awards Ceremony</span>
+                        </div>
+                        <div class="album-overlay">
+                            <span class="album-count"><i class="fas fa-image"></i> 15 Photos</span>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Annual Awards Ceremony</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Faridabad</p>
+                        <p><i class="far fa-calendar-alt"></i> December 20, 2022</p>
+                    </div>
+                </div>
+                
+                <div class="album-card" data-year="2021" data-event="tournament" data-location="rohtak">
+                    <div class="album-thumbnail">
+                        <div class="album-placeholder">
+                            <i class="fas fa-chess-rook"></i>
+                            <span>Rohtak Chess Festival</span>
+                        </div>
+                        <div class="album-overlay">
+                            <span class="album-count"><i class="fas fa-image"></i> 28 Photos</span>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>Rohtak Chess Festival</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Rohtak</p>
+                        <p><i class="far fa-calendar-alt"></i> October 2-5, 2021</p>
+                    </div>
+                </div>
+                
+                <div class="album-card" data-year="2021" data-event="other" data-location="panchkula">
+                    <div class="album-thumbnail">
+                        <div class="album-placeholder">
+                            <i class="fas fa-chess-board"></i>
+                            <span>International Chess Day</span>
+                        </div>
+                        <div class="album-overlay">
+                            <span class="album-count"><i class="fas fa-image"></i> 20 Photos</span>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <h3>International Chess Day</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Panchkula</p>
+                        <p><i class="far fa-calendar-alt"></i> July 20, 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid" id="gallery-container">
+        <div class="container">
+            <h2>Recent Photos</h2>
+            <div class="photos-grid" id="photos-container">
+                <!-- Photos will be dynamically generated by JavaScript -->
+                <!-- Placeholder for demonstration -->
+                <div class="photo-item" data-year="2023" data-event="tournament" data-location="panchkula">
+                    <div class="photo-placeholder">
+                        <i class="fas fa-chess-king"></i>
+                    </div>
+                    <div class="photo-overlay">
+                        <div class="photo-actions">
+                            <button class="photo-action" aria-label="View full size">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                            <button class="photo-action" aria-label="Download photo">
+                                <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                        <div class="photo-info">
+                            <h4>State Championship Final Round</h4>
+                            <p>August 20, 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More photo placeholders will be added by JavaScript -->
+            </div>
+            
+            <div class="gallery-pagination">
+                <button class="load-more-btn">
+                    <i class="fas fa-spinner"></i> Load More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="gallery-lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="lightbox-image-container">
+                <div class="lightbox-placeholder">
+                    <i class="fas fa-chess-king"></i>
+                </div>
+                <div class="lightbox-caption">
+                    <h3>Image Title</h3>
+                    <p>Image description and details will appear here</p>
+                </div>
+            </div>
+            <button class="lightbox-next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                    <p>Promoting chess excellence across Haryana</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="players.html">Players</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="resources.html#rules">Chess Rules</a></li>
+                            <li><a href="resources.html#ratings">Rating System</a></li>
+                            <li><a href="resources.html#certificates">Certificates</a></li>
+                            <li><a href="resources.html#downloads">Downloads</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Connect</h3>
+                        <ul>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="news.html">News & Updates</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to Newsletter</h3>
+                    <p>Stay updated with the latest chess events and news</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Haryana Chess Association. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

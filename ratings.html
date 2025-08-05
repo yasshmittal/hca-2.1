@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratings & Players - Haryana Chess Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/players.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Tournament Calendar</a></li>
+                    <li><a href="results.html">Results</a></li>
+                    <li><a href="rulebook.html">Rulebook</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html" class="active">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active">ENG</button>
+                    <button class="lang-btn">हिंदी</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Ratings & Players</h1>
+                <p>Explore player ratings, rankings, and profiles from across Haryana</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ratings Info Section -->
+    <section class="ratings-info">
+        <div class="container">
+            <h2 class="section-title">Understanding Chess Ratings</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>HCA Rating System</h3>
+                    <p>The Haryana Chess Association uses a rating system similar to the Elo rating system used by FIDE. Players gain or lose rating points based on their performance against other rated players.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Rating Categories</h3>
+                    <p>Players are categorized based on their ratings: Grandmaster (2500+), International Master (2400+), FIDE Master (2300+), Candidate Master (2200+), and Category A-E players.</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Rating Calculation</h3>
+                    <p>Ratings are calculated after each rated tournament. The change in a player's rating depends on the expected outcome based on rating difference and the actual result.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player Search Section -->
+    <section class="player-search">
+        <div class="container">
+            <h2 class="section-title">Find Players</h2>
+            <div class="search-container">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label for="search-name">Player Name or ID:</label>
+                        <input type="text" id="search-name" placeholder="Enter name or HCA ID">
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-district">District:</label>
+                        <select id="filter-district">
+                            <option value="">All Districts</option>
+                            <option value="ambala">Ambala</option>
+                            <option value="bhiwani">Bhiwani</option>
+                            <option value="faridabad">Faridabad</option>
+                            <option value="gurugram">Gurugram</option>
+                            <option value="hisar">Hisar</option>
+                            <option value="jhajjar">Jhajjar</option>
+                            <option value="jind">Jind</option>
+                            <option value="kaithal">Kaithal</option>
+                            <option value="karnal">Karnal</option>
+                            <option value="kurukshetra">Kurukshetra</option>
+                            <option value="mahendragarh">Mahendragarh</option>
+                            <option value="nuh">Nuh</option>
+                            <option value="palwal">Palwal</option>
+                            <option value="panchkula">Panchkula</option>
+                            <option value="panipat">Panipat</option>
+                            <option value="rewari">Rewari</option>
+                            <option value="rohtak">Rohtak</option>
+                            <option value="sirsa">Sirsa</option>
+                            <option value="sonipat">Sonipat</option>
+                            <option value="yamunanagar">Yamunanagar</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-category">Category:</label>
+                        <select id="filter-category">
+                            <option value="">All Categories</option>
+                            <option value="open">Open</option>
+                            <option value="women">Women</option>
+                            <option value="under-19">Under-19</option>
+                            <option value="under-15">Under-15</option>
+                            <option value="under-11">Under-11</option>
+                            <option value="under-9">Under-9</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="filter-rating">Minimum Rating:</label>
+                        <input type="number" id="filter-rating" placeholder="Min Rating" min="0" max="3000">
+                    </div>
+                </div>
+                <div class="search-actions">
+                    <button id="search-btn" class="btn primary-btn">Search Players</button>
+                    <button id="reset-btn" class="btn secondary-btn">Reset Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Players Section -->
+    <section class="top-players">
+        <div class="container">
+            <h2 class="section-title">Top Rated Players</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-category="open">Open</button>
+                <button class="tab-btn" data-category="women">Women</button>
+                <button class="tab-btn" data-category="under-19">Under-19</button>
+                <button class="tab-btn" data-category="under-15">Under-15</button>
+                <button class="tab-btn" data-category="under-11">Under-11</button>
+            </div>
+            <div class="players-table-container">
+                <table class="players-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Name</th>
+                            <th>District</th>
+                            <th>Rating</th>
+                            <th>HCA ID</th>
+                            <th>FIDE ID</th>
+                            <th>Profile</th>
+                        </tr>
+                    </thead>
+                    <tbody id="players-list">
+                        <!-- Sample data for Open category -->
+                        <tr>
+                            <td>1</td>
+                            <td>Vikas Sharma</td>
+                            <td>Gurugram</td>
+                            <td>2245</td>
+                            <td>HCA-1234</td>
+                            <td>5678901</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Rajesh Kumar</td>
+                            <td>Panchkula</td>
+                            <td>2198</td>
+                            <td>HCA-2345</td>
+                            <td>5678902</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Amit Singh</td>
+                            <td>Faridabad</td>
+                            <td>2176</td>
+                            <td>HCA-3456</td>
+                            <td>5678903</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Deepak Verma</td>
+                            <td>Karnal</td>
+                            <td>2154</td>
+                            <td>HCA-4567</td>
+                            <td>5678904</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Sanjay Yadav</td>
+                            <td>Rohtak</td>
+                            <td>2132</td>
+                            <td>HCA-5678</td>
+                            <td>5678905</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Rahul Gupta</td>
+                            <td>Ambala</td>
+                            <td>2098</td>
+                            <td>HCA-6789</td>
+                            <td>5678906</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Manoj Tiwari</td>
+                            <td>Hisar</td>
+                            <td>2087</td>
+                            <td>HCA-7890</td>
+                            <td>5678907</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Vikram Joshi</td>
+                            <td>Sonipat</td>
+                            <td>2065</td>
+                            <td>HCA-8901</td>
+                            <td>5678908</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Suresh Chand</td>
+                            <td>Panipat</td>
+                            <td>2043</td>
+                            <td>HCA-9012</td>
+                            <td>5678909</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Pawan Malhotra</td>
+                            <td>Kurukshetra</td>
+                            <td>2021</td>
+                            <td>HCA-0123</td>
+                            <td>5678910</td>
+                            <td><a href="#" class="view-profile">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">4</button>
+                <button class="pagination-btn">5</button>
+                <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Statistics Section -->
+    <section class="rating-statistics">
+        <div class="container">
+            <h2 class="section-title">Rating Statistics</h2>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <h3>District-wise Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="district-chart"></canvas>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <h3>Rating Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="rating-chart"></canvas>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <h3>Age Group Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="age-chart"></canvas>
+                    </div>
+                </div>
+                <div class="stats-card">
+                    <h3>Gender Distribution</h3>
+                    <div class="chart-container">
+                        <canvas id="gender-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player Profile Modal -->
+    <div class="modal" id="player-profile-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="player-profile">
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img src="images/player-placeholder.jpg" alt="Player Photo">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Vikas Sharma</h2>
+                        <div class="profile-details">
+                            <div class="detail-item">
+                                <span class="detail-label">District:</span>
+                                <span class="detail-value">Gurugram</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Rating:</span>
+                                <span class="detail-value">2245</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">HCA ID:</span>
+                                <span class="detail-value">HCA-1234</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">FIDE ID:</span>
+                                <span class="detail-value">5678901</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Category:</span>
+                                <span class="detail-value">Open</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="history">Rating History</button>
+                    <button class="profile-tab" data-tab="tournaments">Recent Tournaments</button>
+                    <button class="profile-tab" data-tab="achievements">Achievements</button>
+                </div>
+                <div class="profile-content">
+                    <div class="profile-tab-content active" id="history-content">
+                        <h3>Rating History</h3>
+                        <div class="chart-container">
+                            <canvas id="rating-history-chart"></canvas>
+                        </div>
+                        <table class="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Tournament</th>
+                                    <th>Old Rating</th>
+                                    <th>Change</th>
+                                    <th>New Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>May 2023</td>
+                                    <td>Haryana State Championship</td>
+                                    <td>2230</td>
+                                    <td>+15</td>
+                                    <td>2245</td>
+                                </tr>
+                                <tr>
+                                    <td>March 2023</td>
+                                    <td>Gurugram Open</td>
+                                    <td>2215</td>
+                                    <td>+15</td>
+                                    <td>2230</td>
+                                </tr>
+                                <tr>
+                                    <td>January 2023</td>
+                                    <td>Delhi International Open</td>
+                                    <td>2225</td>
+                                    <td>-10</td>
+                                    <td>2215</td>
+                                </tr>
+                                <tr>
+                                    <td>November 2022</td>
+                                    <td>National B Championship</td>
+                                    <td>2205</td>
+                                    <td>+20</td>
+                                    <td>2225</td>
+                                </tr>
+                                <tr>
+                                    <td>September 2022</td>
+                                    <td>Haryana Rapid Championship</td>
+                                    <td>2195</td>
+                                    <td>+10</td>
+                                    <td>2205</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="profile-tab-content" id="tournaments-content">
+                        <h3>Recent Tournaments</h3>
+                        <table class="tournaments-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Tournament</th>
+                                    <th>Category</th>
+                                    <th>Position</th>
+                                    <th>Score</th>
+                                    <th>Performance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>May 2023</td>
+                                    <td>Haryana State Championship</td>
+                                    <td>Open</td>
+                                    <td>3rd</td>
+                                    <td>7.5/9</td>
+                                    <td>2310</td>
+                                </tr>
+                                <tr>
+                                    <td>March 2023</td>
+                                    <td>Gurugram Open</td>
+                                    <td>Open</td>
+                                    <td>5th</td>
+                                    <td>6/9</td>
+                                    <td>2280</td>
+                                </tr>
+                                <tr>
+                                    <td>January 2023</td>
+                                    <td>Delhi International Open</td>
+                                    <td>Open</td>
+                                    <td>25th</td>
+                                    <td>5/9</td>
+                                    <td>2180</td>
+                                </tr>
+                                <tr>
+                                    <td>November 2022</td>
+                                    <td>National B Championship</td>
+                                    <td>Open</td>
+                                    <td>12th</td>
+                                    <td>6.5/9</td>
+                                    <td>2295</td>
+                                </tr>
+                                <tr>
+                                    <td>September 2022</td>
+                                    <td>Haryana Rapid Championship</td>
+                                    <td>Rapid</td>
+                                    <td>1st</td>
+                                    <td>8/9</td>
+                                    <td>2350</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="profile-tab-content" id="achievements-content">
+                        <h3>Achievements</h3>
+                        <ul class="achievements-list">
+                            <li>
+                                <div class="achievement-year">2023</div>
+                                <div class="achievement-content">
+                                    <h4>Bronze Medal - Haryana State Championship</h4>
+                                    <p>Secured 3rd place in the Haryana State Championship with a performance rating of 2310.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achievement-year">2022</div>
+                                <div class="achievement-content">
+                                    <h4>Gold Medal - Haryana Rapid Championship</h4>
+                                    <p>Won the Haryana Rapid Championship with a score of 8/9.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achievement-year">2022</div>
+                                <div class="achievement-content">
+                                    <h4>Qualified for National A Championship</h4>
+                                    <p>Qualified for the National A Championship through the National B Championship.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achievement-year">2021</div>
+                                <div class="achievement-content">
+                                    <h4>Silver Medal - North Zone Championship</h4>
+                                    <p>Secured 2nd place in the North Zone Championship.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="achievement-year">2020</div>
+                                <div class="achievement-content">
+                                    <h4>FIDE Master Title</h4>
+                                    <p>Achieved the FIDE Master title after crossing the 2300 rating threshold.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <div class="footer-logo">
+                            <img src="logo.png" alt="Haryana Chess Association Logo">
+                        </div>
+                        <p class="footer-description">Promoting chess excellence across Haryana since 1982</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="results.html">Results</a></li>
+                            <li><a href="rulebook.html">Rulebook</a></li>
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="ratings.html">Ratings & Players</a></li>
+                            <li><a href="affiliated.html">Affiliated Units</a></li>
+                            <li><a href="rankings-news.html">Rankings & News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Contact Us</h3>
+                        <ul class="footer-contact">
+                            <li><i class="fas fa-map-marker-alt"></i> HCA Office, Sector 12, Panchkula, Haryana</li>
+                            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                            <li><i class="fas fa-envelope"></i> info@haryanachess.org</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">© 2023 Haryana Chess Association. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="/admin-login" class="admin-link">Admin Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ratings.js"></script>
+</body>
+</html>

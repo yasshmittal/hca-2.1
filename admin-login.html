@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Haryana Chess Association</title>
+    <meta name="description" content="Secure login portal for Haryana Chess Association administrators.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+                <h1>Admin Login</h1>
+                <p>Access the administrative dashboard to manage content, tournaments, and more.</p>
+            </div>
+            
+            <div class="login-tabs">
+                <button class="tab-btn active" data-tab="email">Email OTP</button>
+                <button class="tab-btn" data-tab="password">Password</button>
+            </div>
+            
+            <div class="login-form-container">
+                <!-- Email OTP Form -->
+                <form id="email-form" class="login-form active">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group otp-group" style="display: none;">
+                        <label for="otp">One-Time Password</label>
+                        <div class="otp-inputs">
+                            <input type="text" maxlength="1" class="otp-input" required>
+                            <input type="text" maxlength="1" class="otp-input" required>
+                            <input type="text" maxlength="1" class="otp-input" required>
+                            <input type="text" maxlength="1" class="otp-input" required>
+                            <input type="text" maxlength="1" class="otp-input" required>
+                            <input type="text" maxlength="1" class="otp-input" required>
+                        </div>
+                        <div class="resend-otp">
+                            <span id="timer">Resend OTP in <span id="countdown">30</span>s</span>
+                            <button type="button" id="resend-btn" disabled>Resend OTP</button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="send-otp-btn" class="btn btn-primary">Send OTP</button>
+                        <button type="submit" id="verify-otp-btn" class="btn btn-primary" style="display: none;">Verify & Login</button>
+                    </div>
+                </form>
+                
+                <!-- Password Form -->
+                <form id="password-form" class="login-form">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="login-email" name="login-email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group remember-forgot">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <a href="#" class="forgot-password">Forgot password?</a>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="login-footer">
+                <p>Not an administrator? <a href="dev-login.html">Developer Login</a></p>
+                <p><a href="index.html"><i class="fas fa-arrow-left"></i> Back to Website</a></p>
+            </div>
+        </div>
+        
+        <div class="login-info">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure Access</h3>
+                <p>This portal is exclusively for authorized administrators of the Haryana Chess Association.</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Admin Tools</h3>
+                <p>Manage tournament data, certificates, gallery, and website content through the admin dashboard.</p>
+            </div>
+            
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h3>Need Help?</h3>
+                <p>Contact the technical team at <a href="mailto:tech@haryanachess.org">tech@haryanachess.org</a> for assistance.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/admin-login.js"></script>
+</body>
+</html>

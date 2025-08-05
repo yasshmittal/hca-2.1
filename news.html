@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Announcements - Haryana Chess Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header will be loaded via JavaScript -->
+    <header id="header-placeholder"></header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>News & Announcements</h1>
+            <p>Stay updated with the latest chess news, announcements, and press releases from Haryana Chess Association</p>
+        </div>
+    </section>
+
+    <!-- News Filters and Search -->
+    <section class="news-filters">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="search-box">
+                    <input type="text" id="news-search" placeholder="Search news...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="category-filter">Category:</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="announcements">Announcements</option>
+                            <option value="tournaments">Tournaments</option>
+                            <option value="results">Results</option>
+                            <option value="players">Players</option>
+                            <option value="press">Press Releases</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="year-filter">Year:</label>
+                        <select id="year-filter">
+                            <option value="all">All Years</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                        </select>
+                    </div>
+                    <button id="apply-filters" class="btn">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="featured-news">
+        <div class="container">
+            <h2>Featured News</h2>
+            <div class="featured-news-grid">
+                <div class="featured-news-main">
+                    <div class="news-card featured">
+                        <div class="news-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-chess-king"></i>
+                                <span>Featured Image</span>
+                            </div>
+                            <div class="news-category">Tournament</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">June 15, 2023</div>
+                            <h3>Haryana State Chess Championship 2023 Announced</h3>
+                            <p>The Haryana Chess Association is proud to announce the dates for the prestigious Haryana State Chess Championship 2023. The tournament will be held from July 15-20, 2023 in Panchkula.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-news-secondary">
+                    <div class="news-card">
+                        <div class="news-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-trophy"></i>
+                                <span>News Image</span>
+                            </div>
+                            <div class="news-category">Results</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">June 10, 2023</div>
+                            <h3>Rajesh Sharma Wins Gurugram Open</h3>
+                            <p>Rajesh Sharma emerged as the champion of the Gurugram Open Chess Tournament, defeating 86 players from across the state.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-chess-queen"></i>
+                                <span>News Image</span>
+                            </div>
+                            <div class="news-category">Players</div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-date">June 5, 2023</div>
+                            <h3>Ananya Gupta Achieves Woman FIDE Master Title</h3>
+                            <p>Haryana's rising star Ananya Gupta has achieved the Woman FIDE Master title after her exceptional performance in the National Championship.</p>
+                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div class="news-grid" id="news-grid">
+                <!-- News cards will be dynamically generated via JavaScript -->
+                <!-- Placeholder for demonstration -->
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chess-board"></i>
+                            <span>News Image</span>
+                        </div>
+                        <div class="news-category">Announcement</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">June 1, 2023</div>
+                        <h3>HCA Launches New Website</h3>
+                        <p>The Haryana Chess Association is pleased to announce the launch of its new official website, designed to better serve the chess community of Haryana.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-medal"></i>
+                            <span>News Image</span>
+                        </div>
+                        <div class="news-category">Tournament</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 25, 2023</div>
+                        <h3>Faridabad to Host Junior Chess Championship</h3>
+                        <p>The Haryana Junior Chess Championship will be held in Faridabad from June 10-12, 2023. Registration is now open for all eligible junior players.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chess-knight"></i>
+                            <span>News Image</span>
+                        </div>
+                        <div class="news-category">Press Release</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 20, 2023</div>
+                        <h3>HCA Signs MoU with Schools to Promote Chess</h3>
+                        <p>The Haryana Chess Association has signed a Memorandum of Understanding with 50 schools across the state to promote chess as part of the curriculum.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-graduate"></i>
+                            <span>News Image</span>
+                        </div>
+                        <div class="news-category">Announcement</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 15, 2023</div>
+                        <h3>Chess Coaching Camp Announced for Summer</h3>
+                        <p>HCA will organize a summer coaching camp for young chess enthusiasts from June 1-15, 2023. The camp will feature sessions by titled players and experienced coaches.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-handshake"></i>
+                            <span>News Image</span>
+                        </div>
+                        <div class="news-category">Press Release</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 10, 2023</div>
+                        <h3>HCA Partners with Corporate Sponsor for Tournament Series</h3>
+                        <p>The Haryana Chess Association has secured a major sponsorship deal with a leading corporate entity to support a series of tournaments throughout the year.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-chess-rook"></i>
+                            <span>News Image</span>
+                        </div>
+                        <div class="news-category">Results</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">May 5, 2023</div>
+                        <h3>Haryana Players Excel at National Rapid Championship</h3>
+                        <p>Players from Haryana have shown exceptional performance at the National Rapid Chess Championship, with three players finishing in the top 10.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="no-results" id="no-news-results" style="display: none;">
+                <i class="fas fa-newspaper"></i>
+                <h3>No news found</h3>
+                <p>There are no news articles matching your search criteria. Please try different filters or search terms.</p>
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <span class="pagination-ellipsis">...</span>
+                <button class="pagination-btn">10</button>
+                <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Releases -->
+    <section class="press-releases">
+        <div class="container">
+            <h2>Official Press Releases</h2>
+            <div class="press-releases-list">
+                <div class="press-release-item">
+                    <div class="press-release-date">
+                        <span class="day">20</span>
+                        <span class="month">May</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="press-release-content">
+                        <h3>HCA Signs MoU with Schools to Promote Chess</h3>
+                        <p>The Haryana Chess Association has signed a Memorandum of Understanding with 50 schools across the state to promote chess as part of the curriculum. This initiative aims to introduce chess to over 10,000 students in the next academic year.</p>
+                        <div class="press-release-actions">
+                            <a href="#" class="btn btn-outline">Read Full Release</a>
+                            <a href="#" class="btn btn-outline">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="press-release-item">
+                    <div class="press-release-date">
+                        <span class="day">10</span>
+                        <span class="month">May</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="press-release-content">
+                        <h3>HCA Partners with Corporate Sponsor for Tournament Series</h3>
+                        <p>The Haryana Chess Association has secured a major sponsorship deal with a leading corporate entity to support a series of tournaments throughout the year. The partnership will enhance prize funds and improve tournament conditions for players.</p>
+                        <div class="press-release-actions">
+                            <a href="#" class="btn btn-outline">Read Full Release</a>
+                            <a href="#" class="btn btn-outline">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="press-release-item">
+                    <div class="press-release-date">
+                        <span class="day">25</span>
+                        <span class="month">Apr</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="press-release-content">
+                        <h3>HCA Announces Chess Development Program for Rural Areas</h3>
+                        <p>The Haryana Chess Association is launching a comprehensive chess development program targeting rural areas of the state. The program includes distribution of chess equipment, training of local coaches, and organizing grassroots tournaments.</p>
+                        <div class="press-release-actions">
+                            <a href="#" class="btn btn-outline">Read Full Release</a>
+                            <a href="#" class="btn btn-outline">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-more">
+                <a href="#" class="btn btn-outline">View All Press Releases</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Archive -->
+    <section class="news-archive">
+        <div class="container">
+            <h2>News Archive</h2>
+            <div class="archive-years">
+                <div class="archive-year">
+                    <h3>2023</h3>
+                    <ul class="archive-months">
+                        <li><a href="#">June <span>(5)</span></a></li>
+                        <li><a href="#">May <span>(8)</span></a></li>
+                        <li><a href="#">April <span>(6)</span></a></li>
+                        <li><a href="#">March <span>(7)</span></a></li>
+                        <li><a href="#">February <span>(4)</span></a></li>
+                        <li><a href="#">January <span>(5)</span></a></li>
+                    </ul>
+                </div>
+                <div class="archive-year">
+                    <h3>2022</h3>
+                    <ul class="archive-months">
+                        <li><a href="#">December <span>(6)</span></a></li>
+                        <li><a href="#">November <span>(5)</span></a></li>
+                        <li><a href="#">October <span>(7)</span></a></li>
+                        <li><a href="#">September <span>(4)</span></a></li>
+                        <li><a href="#">August <span>(8)</span></a></li>
+                        <li><a href="#">July <span>(6)</span></a></li>
+                    </ul>
+                </div>
+                <div class="archive-year">
+                    <h3>2021</h3>
+                    <ul class="archive-months">
+                        <li><a href="#">December <span>(5)</span></a></li>
+                        <li><a href="#">November <span>(4)</span></a></li>
+                        <li><a href="#">October <span>(6)</span></a></li>
+                        <li><a href="#">September <span>(7)</span></a></li>
+                        <li><a href="#">August <span>(5)</span></a></li>
+                        <li><a href="#">July <span>(4)</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-info">
+                    <h2>Subscribe to Our Newsletter</h2>
+                    <p>Stay updated with the latest chess news, tournament announcements, and results from Haryana Chess Association. Our newsletter is sent monthly and includes exclusive content for subscribers.</p>
+                    <ul class="newsletter-benefits">
+                        <li><i class="fas fa-check"></i> Tournament announcements before public release</li>
+                        <li><i class="fas fa-check"></i> Exclusive interviews with top players</li>
+                        <li><i class="fas fa-check"></i> Chess puzzles and training tips</li>
+                        <li><i class="fas fa-check"></i> Special offers for HCA events</li>
+                    </ul>
+                </div>
+                <div class="newsletter-form">
+                    <form id="subscribe-form">
+                        <div class="form-group">
+                            <label for="subscriber-name">Your Name</label>
+                            <input type="text" id="subscriber-name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subscriber-email">Email Address</label>
+                            <input type="email" id="subscriber-email" name="email" required>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy-consent" name="privacy-consent" required>
+                            <label for="privacy-consent">I agree to receive newsletters and accept the <a href="#">privacy policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                    </form>
+                    <div class="subscription-success" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank You for Subscribing!</h3>
+                        <p>You have successfully subscribed to our newsletter. Please check your email for confirmation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Article Modal -->
+    <div class="modal" id="news-article-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="article-header">
+                <div class="article-category" id="modal-article-category">Tournament</div>
+                <h2 id="modal-article-title">Haryana State Chess Championship 2023 Announced</h2>
+                <div class="article-meta">
+                    <span class="article-date" id="modal-article-date">June 15, 2023</span>
+                    <span class="article-author" id="modal-article-author">By HCA Admin</span>
+                </div>
+            </div>
+            <div class="article-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-chess-king"></i>
+                    <span>Article Image</span>
+                </div>
+            </div>
+            <div class="article-content" id="modal-article-content">
+                <p>The Haryana Chess Association is proud to announce the dates for the prestigious Haryana State Chess Championship 2023. The tournament will be held from July 15-20, 2023 in Panchkula.</p>
+                
+                <p>This championship will serve as a qualification event for the National Chess Championship and will feature the best chess players from across the state competing for the title of Haryana State Champion.</p>
+                
+                <h3>Tournament Details:</h3>
+                <ul>
+                    <li><strong>Dates:</strong> July 15-20, 2023</li>
+                    <li><strong>Venue:</strong> Haryana Chess Academy, Sector 6, Panchkula</li>
+                    <li><strong>Format:</strong> 9-round Swiss System</li>
+                    <li><strong>Time Control:</strong> 90 minutes with 30 seconds increment from move 1</li>
+                    <li><strong>Prize Fund:</strong> ₹100,000</li>
+                </ul>
+                
+                <p>The championship will be conducted in accordance with FIDE Laws of Chess and will be rated by both FIDE and AICF. Players must have a valid AICF registration for the year 2023-24 to participate.</p>
+                
+                <h3>Categories:</h3>
+                <p>The championship will include the following categories:</p>
+                <ul>
+                    <li>Open Category</li>
+                    <li>Women's Category</li>
+                    <li>Under-19 Boys and Girls</li>
+                    <li>Under-15 Boys and Girls</li>
+                    <li>Under-11 Boys and Girls</li>
+                </ul>
+                
+                <p>Registration for the championship will open on June 20, 2023. Players can register online through the HCA website or in person at the HCA office in Panchkula.</p>
+                
+                <p>For more information, please contact the tournament director at <a href="mailto:tournaments@hca.org">tournaments@hca.org</a> or call the HCA office at +91-1234567890.</p>
+                
+                <p>We look forward to welcoming all players to this prestigious event and witnessing exciting chess battles to crown the new Haryana State Champions!</p>
+            </div>
+            <div class="article-footer">
+                <div class="article-tags">
+                    <span class="tag">Tournament</span>
+                    <span class="tag">Championship</span>
+                    <span class="tag">Panchkula</span>
+                </div>
+                <div class="article-share">
+                    <span>Share:</span>
+                    <a href="#" class="share-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="share-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="related-articles">
+                <h3>Related Articles</h3>
+                <div class="related-articles-grid">
+                    <div class="related-article">
+                        <div class="related-article-image">
+                            <div class="image-placeholder small">
+                                <i class="fas fa-chess-knight"></i>
+                            </div>
+                        </div>
+                        <div class="related-article-content">
+                            <h4>Preparation Tips for State Championship</h4>
+                            <span class="related-article-date">June 10, 2023</span>
+                        </div>
+                    </div>
+                    <div class="related-article">
+                        <div class="related-article-image">
+                            <div class="image-placeholder small">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                        </div>
+                        <div class="related-article-content">
+                            <h4>Last Year's Championship Highlights</h4>
+                            <span class="related-article-date">June 5, 2023</span>
+                        </div>
+                    </div>
+                    <div class="related-article">
+                        <div class="related-article-image">
+                            <div class="image-placeholder small">
+                                <i class="fas fa-chess-board"></i>
+                            </div>
+                        </div>
+                        <div class="related-article-content">
+                            <h4>Venue Facilities for Players and Spectators</h4>
+                            <span class="related-article-date">June 1, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be loaded via JavaScript -->
+    <footer id="footer-placeholder"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>

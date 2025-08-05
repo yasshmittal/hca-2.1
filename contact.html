@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Haryana Chess Association</title>
+    <meta name="description" content="Get in touch with the Haryana Chess Association. Find our contact information, office location, and send us a message.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Haryana Chess Association Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="calendar.html">Tournament Calendar</a></li>
+                    <li><a href="pairings-results.html">Pairings & Results</a></li>
+                    <li><a href="rulebook.html">Rulebook</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li class="dropdown">
+                        <a href="#">More <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="mission.html">Mission</a></li>
+                            <li><a href="education.html">HCA in Education</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="players.html">Players</a></li>
+                            <li><a href="contact.html" class="active">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <div class="language-toggle">
+                    <button class="lang-btn active">ENG</button>
+                    <button class="lang-btn">हिंदी</button>
+                </div>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a> / <span>Contact Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Office</h3>
+                    <p>HCA Office, Sports Complex<br>Sector 3, Panchkula<br>Haryana - 134109</p>
+                    <a href="https://maps.google.com/?q=Sports+Complex+Sector+3+Panchkula+Haryana" target="_blank" class="contact-link">View on Map <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>Main Office: +91 123 456 7890</p>
+                    <p>Tournament Desk: +91 098 765 4321</p>
+                    <a href="tel:+911234567890" class="contact-link">Call Us</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>General Inquiries:<br>info@haryanachess.org</p>
+                    <p>Tournament Registration:<br>tournaments@haryanachess.org</p>
+                    <a href="mailto:info@haryanachess.org" class="contact-link">Send Email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Office Hours</h3>
+                    <p>Monday - Friday: 10:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-wrapper">
+                <div class="form-content">
+                    <div class="section-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Have questions or feedback? We'd love to hear from you.</p>
+                    </div>
+                    
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="message">Your Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">I agree to the processing of my personal data in accordance with the <a href="#">Privacy Policy</a>.</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="form-image">
+                    <div class="image-wrapper">
+                        <img src="assets/chess-pattern.svg" alt="Chess Pattern" class="chess-pattern">
+                        <div class="contact-image-overlay">
+                            <h3>Connect With Us</h3>
+                            <p>Follow us on social media for the latest updates, tournament announcements, and chess news.</p>
+                            <div class="social-links">
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <!-- This would be replaced with an actual Google Maps embed in production -->
+            <div class="map-placeholder">
+                <div class="map-overlay">
+                    <h3>Our Location</h3>
+                    <p>HCA Office, Sports Complex, Sector 3, Panchkula, Haryana - 134109</p>
+                    <a href="https://maps.google.com/?q=Sports+Complex+Sector+3+Panchkula+Haryana" target="_blank" class="btn btn-secondary">Open in Google Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about the Haryana Chess Association</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I register for tournaments?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tournament registration can be done through our website by visiting the Tournament Calendar page and clicking on the specific tournament you wish to participate in. You can also register in person at our office during working hours or by emailing tournaments@haryanachess.org.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I become a member of the Haryana Chess Association?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To become a member, you need to fill out the membership application form available on our website or at our office. The form should be submitted along with the required documents and membership fee. Annual and lifetime membership options are available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I get my FIDE rating?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To get a FIDE rating, you need to participate in FIDE-rated tournaments. The Haryana Chess Association regularly organizes such tournaments. You'll need to register with FIDE through us, which requires your personal details and a registration fee. Once registered, your performance in rated tournaments will determine your initial rating.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Does the association provide coaching or training?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, the Haryana Chess Association conducts regular training camps and workshops for players of all levels. We also maintain a directory of certified coaches across Haryana who provide individual and group coaching. Please contact our office for more information on upcoming training programs or to get connected with a coach in your area.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I verify my chess certificate?</h3>
+                        <span class="toggle-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can verify the authenticity of your chess certificate by using the Certificate Verification tool on our homepage. Enter your certificate number and date of birth, and the system will display the certificate details. For older certificates or any verification issues, please contact our office directly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <div class="footer-logo">
+                            <img src="logo.png" alt="Haryana Chess Association Logo">
+                        </div>
+                        <p>Promoting chess excellence across Haryana through tournaments, training, and community building.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="calendar.html">Tournament Calendar</a></li>
+                            <li><a href="#">Players</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Rules & Regulations</a></li>
+                            <li><a href="#">Training Materials</a></li>
+                            <li><a href="#">Chess Clubs</a></li>
+                            <li><a href="#">Coaches Directory</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <address>
+                            <p><i class="fas fa-map-marker-alt"></i> HCA Office, Sports Complex, Sector 3, Panchkula, Haryana - 134109</p>
+                            <p><i class="fas fa-phone"></i> +91 123 456 7890</p>
+                            <p><i class="fas fa-envelope"></i> info@haryanachess.org</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Haryana Chess Association. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

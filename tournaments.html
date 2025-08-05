@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments - Haryana Chess Association</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tournaments.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header will be loaded via JavaScript -->
+    <header id="header-placeholder"></header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <div class="banner-content">
+            <h1>Tournaments</h1>
+            <p>Official chess tournaments organized by Haryana Chess Association</p>
+        </div>
+    </section>
+
+    <!-- Upcoming Tournaments -->
+    <section class="tournaments-section upcoming-tournaments">
+        <div class="container">
+            <h2>Upcoming Tournaments</h2>
+            <div class="tournament-filters">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="open">Open</option>
+                        <option value="under-19">Under 19</option>
+                        <option value="under-15">Under 15</option>
+                        <option value="under-11">Under 11</option>
+                        <option value="women">Women</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location-filter">Location:</label>
+                    <select id="location-filter">
+                        <option value="all">All Locations</option>
+                        <option value="panchkula">Panchkula</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="faridabad">Faridabad</option>
+                        <option value="hisar">Hisar</option>
+                        <option value="rohtak">Rohtak</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="type-filter">Type:</label>
+                    <select id="type-filter">
+                        <option value="all">All Types</option>
+                        <option value="rapid">Rapid</option>
+                        <option value="blitz">Blitz</option>
+                        <option value="classical">Classical</option>
+                        <option value="team">Team</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="btn">Apply Filters</button>
+            </div>
+
+            <div class="tournaments-grid" id="upcoming-tournaments-grid">
+                <!-- Tournament cards will be dynamically generated via JavaScript -->
+                <!-- Placeholder for demonstration -->
+                <div class="tournament-card">
+                    <div class="tournament-date">
+                        <span class="day">15</span>
+                        <span class="month">Jun</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3>Haryana State Chess Championship</h3>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Panchkula</span>
+                            <span><i class="fas fa-chess-knight"></i> Classical</span>
+                            <span><i class="fas fa-users"></i> Open</span>
+                        </div>
+                        <p class="tournament-description">The premier chess event in Haryana featuring the state's top players competing for the state championship title.</p>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <span class="label">Entry Fee:</span>
+                                <span class="value">₹1000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Prize Fund:</span>
+                                <span class="value">₹100,000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Time Control:</span>
+                                <span class="value">90min + 30sec</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Rounds:</span>
+                                <span class="value">9</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="#" class="btn btn-primary">Register Now</a>
+                            <a href="#" class="btn btn-secondary">Details</a>
+                        </div>
+                    </div>
+                    <div class="tournament-status">
+                        <span class="status-badge registration-open">Registration Open</span>
+                    </div>
+                </div>
+
+                <div class="tournament-card">
+                    <div class="tournament-date">
+                        <span class="day">22</span>
+                        <span class="month">Jun</span>
+                        <span class="year">2023</span>
+                    </div>
+                    <div class="tournament-details">
+                        <h3>Gurugram Rapid Chess Tournament</h3>
+                        <div class="tournament-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Gurugram</span>
+                            <span><i class="fas fa-chess-knight"></i> Rapid</span>
+                            <span><i class="fas fa-users"></i> Under 15</span>
+                        </div>
+                        <p class="tournament-description">A rapid chess tournament for young players under 15 years of age, promoting chess among the youth of Gurugram.</p>
+                        <div class="tournament-info">
+                            <div class="info-item">
+                                <span class="label">Entry Fee:</span>
+                                <span class="value">₹500</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Prize Fund:</span>
+                                <span class="value">₹25,000</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Time Control:</span>
+                                <span class="value">15min + 10sec</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Rounds:</span>
+                                <span class="value">7</span>
+                            </div>
+                        </div>
+                        <div class="tournament-actions">
+                            <a href="#" class="btn btn-primary">Register Now</a>
+                            <a href="#" class="btn btn-secondary">Details</a>
+                        </div>
+                    </div>
+                    <div class="tournament-status">
+                        <span class="status-badge registration-open">Registration Open</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results" id="no-upcoming-tournaments" style="display: none;">
+                <i class="fas fa-chess-board"></i>
+                <h3>No tournaments found</h3>
+                <p>There are no upcoming tournaments matching your filters. Please try different filter options or check back later.</p>
+            </div>
+
+            <div class="view-more">
+                <a href="calendar.html" class="btn btn-outline">View Full Calendar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Registration -->
+    <section class="tournaments-section registration-section">
+        <div class="container">
+            <h2>Tournament Registration</h2>
+            <div class="registration-info">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>How to Register</h3>
+                    <ol>
+                        <li>Select a tournament from the list above</li>
+                        <li>Click on the "Register Now" button</li>
+                        <li>Fill out the registration form with your details</li>
+                        <li>Pay the entry fee online or at the venue</li>
+                        <li>Receive confirmation email with tournament details</li>
+                    </ol>
+                    <a href="#" class="btn btn-outline">Registration Guidelines</a>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>Player Requirements</h3>
+                    <ul>
+                        <li>Valid HCA/AICF registration</li>
+                        <li>Age proof for age-restricted tournaments</li>
+                        <li>FIDE ID (if applicable)</li>
+                        <li>Recent passport-sized photograph</li>
+                        <li>Payment of entry fee</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Player Registration</a>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Tournament Benefits</h3>
+                    <ul>
+                        <li>FIDE/AICF rating changes</li>
+                        <li>Certificates for all participants</li>
+                        <li>Cash prizes for winners</li>
+                        <li>Selection for state teams</li>
+                        <li>Opportunity to play with titled players</li>
+                    </ul>
+                    <a href="#" class="btn btn-outline">Prize Structure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Results -->
+    <section class="tournaments-section results-section">
+        <div class="container">
+            <h2>Recent Tournament Results</h2>
+            <div class="results-tabs">
+                <button class="tab-btn active" data-tab="recent-results">Recent Results</button>
+                <button class="tab-btn" data-tab="state-championships">State Championships</button>
+                <button class="tab-btn" data-tab="national-representation">National Representation</button>
+            </div>
+
+            <div class="tab-content active" id="recent-results">
+                <div class="results-list">
+                    <!-- Results will be dynamically generated via JavaScript -->
+                    <!-- Placeholder for demonstration -->
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h3>Faridabad Open Chess Tournament</h3>
+                            <span class="result-date">May 10-12, 2023</span>
+                        </div>
+                        <div class="result-details">
+                            <div class="result-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Faridabad</span>
+                                <span><i class="fas fa-chess-knight"></i> Classical</span>
+                                <span><i class="fas fa-users"></i> 86 Players</span>
+                            </div>
+                            <div class="winners-podium">
+                                <div class="winner second-place">
+                                    <div class="position">2</div>
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-name">Amit Kumar</div>
+                                </div>
+                                <div class="winner first-place">
+                                    <div class="position">1</div>
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-name">Rajesh Sharma</div>
+                                </div>
+                                <div class="winner third-place">
+                                    <div class="position">3</div>
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-name">Priya Singh</div>
+                                </div>
+                            </div>
+                            <div class="result-actions">
+                                <a href="#" class="btn btn-outline">Full Results</a>
+                                <a href="#" class="btn btn-outline">Tournament Report</a>
+                                <a href="#" class="btn btn-outline">Photo Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-card">
+                        <div class="result-header">
+                            <h3>Haryana Junior Blitz Championship</h3>
+                            <span class="result-date">April 22, 2023</span>
+                        </div>
+                        <div class="result-details">
+                            <div class="result-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Rohtak</span>
+                                <span><i class="fas fa-chess-knight"></i> Blitz</span>
+                                <span><i class="fas fa-users"></i> 64 Players</span>
+                            </div>
+                            <div class="winners-podium">
+                                <div class="winner second-place">
+                                    <div class="position">2</div>
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-name">Vikram Yadav</div>
+                                </div>
+                                <div class="winner first-place">
+                                    <div class="position">1</div>
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-name">Ananya Gupta</div>
+                                </div>
+                                <div class="winner third-place">
+                                    <div class="position">3</div>
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-name">Rahul Verma</div>
+                                </div>
+                            </div>
+                            <div class="result-actions">
+                                <a href="#" class="btn btn-outline">Full Results</a>
+                                <a href="#" class="btn btn-outline">Tournament Report</a>
+                                <a href="#" class="btn btn-outline">Photo Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="state-championships">
+                <div class="championship-history">
+                    <h3>Haryana State Chess Champions</h3>
+                    <div class="champions-table-wrapper">
+                        <table class="champions-table">
+                            <thead>
+                                <tr>
+                                    <th>Year</th>
+                                    <th>Open Champion</th>
+                                    <th>Women's Champion</th>
+                                    <th>Junior Champion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2023</td>
+                                    <td>Rajesh Sharma</td>
+                                    <td>Priya Singh</td>
+                                    <td>Vikram Yadav</td>
+                                </tr>
+                                <tr>
+                                    <td>2022</td>
+                                    <td>Amit Kumar</td>
+                                    <td>Ananya Gupta</td>
+                                    <td>Rahul Verma</td>
+                                </tr>
+                                <tr>
+                                    <td>2021</td>
+                                    <td>Suresh Patel</td>
+                                    <td>Meena Kumari</td>
+                                    <td>Vikram Yadav</td>
+                                </tr>
+                                <tr>
+                                    <td>2020</td>
+                                    <td>Rajesh Sharma</td>
+                                    <td>Priya Singh</td>
+                                    <td>Amit Kumar</td>
+                                </tr>
+                                <tr>
+                                    <td>2019</td>
+                                    <td>Vijay Singh</td>
+                                    <td>Ananya Gupta</td>
+                                    <td>Suresh Patel</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="view-more">
+                        <a href="#" class="btn btn-outline">View Complete History</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="national-representation">
+                <div class="national-players">
+                    <h3>Haryana Players in National Tournaments</h3>
+                    <div class="national-representation-grid">
+                        <div class="representation-card">
+                            <div class="tournament-name">National Chess Championship 2023</div>
+                            <div class="player-list">
+                                <div class="player-item">
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-info">
+                                        <div class="player-name">Rajesh Sharma</div>
+                                        <div class="player-result">4th Place</div>
+                                    </div>
+                                </div>
+                                <div class="player-item">
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-info">
+                                        <div class="player-name">Priya Singh</div>
+                                        <div class="player-result">6th Place</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="representation-card">
+                            <div class="tournament-name">National Junior Chess Championship 2023</div>
+                            <div class="player-list">
+                                <div class="player-item">
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-info">
+                                        <div class="player-name">Vikram Yadav</div>
+                                        <div class="player-result">2nd Place</div>
+                                    </div>
+                                </div>
+                                <div class="player-item">
+                                    <div class="player-avatar">
+                                        <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                                    </div>
+                                    <div class="player-info">
+                                        <div class="player-name">Ananya Gupta</div>
+                                        <div class="player-result">1st Place (Women)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="view-more">
+                        <a href="#" class="btn btn-outline">View All National Representations</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Hosting -->
+    <section class="tournaments-section hosting-section">
+        <div class="container">
+            <h2>Host a Tournament</h2>
+            <div class="hosting-info">
+                <div class="hosting-content">
+                    <p>Interested in hosting a chess tournament in your district or club? Haryana Chess Association provides support and guidance for organizing official chess tournaments.</p>
+                    <h3>Benefits of Hosting</h3>
+                    <ul>
+                        <li>Promote chess in your community</li>
+                        <li>Official recognition from HCA</li>
+                        <li>Technical support and arbiters</li>
+                        <li>Rating processing for FIDE/AICF</li>
+                        <li>Publicity through HCA channels</li>
+                    </ul>
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>Suitable venue with adequate space</li>
+                        <li>Chess equipment (boards, pieces, clocks)</li>
+                        <li>Basic facilities for players</li>
+                        <li>Compliance with HCA tournament regulations</li>
+                    </ul>
+                    <div class="hosting-actions">
+                        <a href="#" class="btn btn-primary">Apply to Host</a>
+                        <a href="#" class="btn btn-secondary">Download Guidelines</a>
+                    </div>
+                </div>
+                <div class="hosting-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chess-board"></i>
+                        <span>Tournament Hall</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Details Modal -->
+    <div class="modal" id="tournament-details-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modal-tournament-title">Tournament Title</h2>
+                <div class="tournament-meta" id="modal-tournament-meta">
+                    <span><i class="fas fa-calendar-alt"></i> <span id="modal-tournament-date">June 15-20, 2023</span></span>
+                    <span><i class="fas fa-map-marker-alt"></i> <span id="modal-tournament-location">Panchkula</span></span>
+                    <span><i class="fas fa-chess-knight"></i> <span id="modal-tournament-type">Classical</span></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tabs">
+                    <button class="modal-tab active" data-tab="details-tab">Details</button>
+                    <button class="modal-tab" data-tab="schedule-tab">Schedule</button>
+                    <button class="modal-tab" data-tab="venue-tab">Venue</button>
+                    <button class="modal-tab" data-tab="regulations-tab">Regulations</button>
+                </div>
+                
+                <div class="modal-tab-content active" id="details-tab">
+                    <div class="tournament-description" id="modal-tournament-description">
+                        <p>Detailed description of the tournament including format, eligibility, and other important information.</p>
+                    </div>
+                    <div class="tournament-details-grid">
+                        <div class="details-item">
+                            <h4>Entry Fee</h4>
+                            <p id="modal-entry-fee">₹1000</p>
+                        </div>
+                        <div class="details-item">
+                            <h4>Prize Fund</h4>
+                            <p id="modal-prize-fund">₹100,000</p>
+                        </div>
+                        <div class="details-item">
+                            <h4>Time Control</h4>
+                            <p id="modal-time-control">90min + 30sec</p>
+                        </div>
+                        <div class="details-item">
+                            <h4>Rounds</h4>
+                            <p id="modal-rounds">9</p>
+                        </div>
+                        <div class="details-item">
+                            <h4>Rating</h4>
+                            <p id="modal-rating">FIDE & AICF Rated</p>
+                        </div>
+                        <div class="details-item">
+                            <h4>Chief Arbiter</h4>
+                            <p id="modal-arbiter">IA Suresh Kumar</p>
+                        </div>
+                    </div>
+                    <div class="prize-structure">
+                        <h4>Prize Structure</h4>
+                        <table class="prize-table">
+                            <thead>
+                                <tr>
+                                    <th>Position</th>
+                                    <th>Prize</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modal-prize-structure">
+                                <tr>
+                                    <td>1st Place</td>
+                                    <td>₹25,000</td>
+                                </tr>
+                                <tr>
+                                    <td>2nd Place</td>
+                                    <td>₹15,000</td>
+                                </tr>
+                                <tr>
+                                    <td>3rd Place</td>
+                                    <td>₹10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>4th Place</td>
+                                    <td>₹7,000</td>
+                                </tr>
+                                <tr>
+                                    <td>5th Place</td>
+                                    <td>₹5,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="modal-tab-content" id="schedule-tab">
+                    <div class="tournament-schedule">
+                        <h4>Tournament Schedule</h4>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Event</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modal-schedule">
+                                <tr>
+                                    <td>June 15, 2023</td>
+                                    <td>9:00 AM</td>
+                                    <td>Player Registration</td>
+                                </tr>
+                                <tr>
+                                    <td>June 15, 2023</td>
+                                    <td>10:30 AM</td>
+                                    <td>Inauguration</td>
+                                </tr>
+                                <tr>
+                                    <td>June 15, 2023</td>
+                                    <td>11:00 AM</td>
+                                    <td>Round 1</td>
+                                </tr>
+                                <tr>
+                                    <td>June 15, 2023</td>
+                                    <td>4:00 PM</td>
+                                    <td>Round 2</td>
+                                </tr>
+                                <tr>
+                                    <td>June 16, 2023</td>
+                                    <td>9:00 AM</td>
+                                    <td>Round 3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="modal-tab-content" id="venue-tab">
+                    <div class="venue-details">
+                        <h4>Venue Information</h4>
+                        <div class="venue-address" id="modal-venue-address">
+                            <p><strong>Venue:</strong> Haryana Chess Academy</p>
+                            <p><strong>Address:</strong> Sector 6, Panchkula, Haryana 134109</p>
+                            <p><strong>Landmark:</strong> Near City Park</p>
+                        </div>
+                        <div class="venue-facilities">
+                            <h5>Facilities</h5>
+                            <ul id="modal-venue-facilities">
+                                <li>Air-conditioned playing hall</li>
+                                <li>Refreshments available</li>
+                                <li>Parking space</li>
+                                <li>Nearby accommodation options</li>
+                            </ul>
+                        </div>
+                        <div class="venue-map">
+                            <div class="map-placeholder">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <span>Map will be displayed here</span>
+                            </div>
+                        </div>
+                        <div class="venue-travel">
+                            <h5>How to Reach</h5>
+                            <ul id="modal-venue-travel">
+                                <li><strong>By Bus:</strong> City Bus Stop (500m)</li>
+                                <li><strong>By Train:</strong> Chandigarh Railway Station (8km)</li>
+                                <li><strong>By Air:</strong> Chandigarh Airport (15km)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-tab-content" id="regulations-tab">
+                    <div class="tournament-regulations">
+                        <h4>Tournament Regulations</h4>
+                        <div class="regulations-content" id="modal-regulations">
+                            <ol>
+                                <li>The tournament will be conducted as per FIDE Laws of Chess.</li>
+                                <li>Players must arrive at least 15 minutes before the start of each round.</li>
+                                <li>Default time is 30 minutes from the scheduled start of the round.</li>
+                                <li>Electronic devices must be completely switched off and stored as directed by the arbiter.</li>
+                                <li>Tie-breaks will be resolved using: Direct Encounter, Buchholz, Sonneborn-Berger, Progressive Score.</li>
+                                <li>The decision of the Chief Arbiter will be final and binding.</li>
+                                <li>Players must have a valid AICF registration for the current year.</li>
+                                <li>Age proof is mandatory for age-restricted categories.</li>
+                                <li>Entry fees are non-refundable.</li>
+                                <li>The organizers reserve the right to make necessary changes to the schedule if required.</li>
+                            </ol>
+                        </div>
+                        <div class="anti-cheating">
+                            <h5>Anti-Cheating Measures</h5>
+                            <ul>
+                                <li>Random checks using metal detectors</li>
+                                <li>CCTV surveillance in playing hall</li>
+                                <li>Anti-cheating software analysis</li>
+                                <li>Strict penalties for violations</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-primary" id="modal-register-btn">Register Now</a>
+                <button class="btn btn-secondary close-modal-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer will be loaded via JavaScript -->
+    <footer id="footer-placeholder"></footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/tournaments.js"></script>
+</body>
+</html>
